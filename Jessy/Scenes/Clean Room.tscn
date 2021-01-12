@@ -1,0 +1,170 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Clean Room.gd" type="Script" id=1]
+[ext_resource path="res://drag.gd" type="Script" id=2]
+[ext_resource path="res://Box.gd" type="Script" id=3]
+[ext_resource path="res://Art/Temp/JESSY.ART3.png" type="Texture" id=4]
+[ext_resource path="res://Art/Temp/JESSY.CLEN ROOM.png" type="Texture" id=5]
+[ext_resource path="res://Art/Temp/JESSY.ART2.png" type="Texture" id=6]
+[ext_resource path="res://Art/Temp/JESSY.ART1.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://goldie_boxing/Goldie Boxing.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = SubResource( 1 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 208.779, 180.696 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 152.294, 102.2 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 86.7405, 102.2 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 152.294, 102.2 )
+
+[node name="Clean Room" type="Node"]
+script = ExtResource( 1 )
+
+[node name="JESSYCLEN ROOM" type="Sprite" parent="."]
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 2.5, 2.5 )
+
+[node name="Control" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = -594.933
+margin_top = -402.675
+margin_right = -458.933
+margin_bottom = -271.675
+rect_pivot_offset = Vector2( 71.482, 50.8752 )
+custom_fonts/font = SubResource( 2 )
+text = "Art"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control"]
+margin_left = -573.167
+margin_right = -437.167
+margin_bottom = 131.0
+rect_pivot_offset = Vector2( 71.482, 50.8752 )
+custom_fonts/font = SubResource( 2 )
+text = "Pop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Control"]
+margin_left = -594.933
+margin_top = 378.252
+margin_right = -390.933
+margin_bottom = 509.252
+rect_pivot_offset = Vector2( 71.482, 50.8752 )
+custom_fonts/font = SubResource( 2 )
+text = "Books"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Art" type="Area2D" parent="."]
+script = ExtResource( 3 )
+a = [ NodePath("../Pencils"), NodePath("../Sketchpad"), NodePath("../pallete") ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Art"]
+position = Vector2( -573.167, -402.675 )
+shape = SubResource( 3 )
+
+[node name="Pop" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pop"]
+position = Vector2( -549.791, 0 )
+shape = SubResource( 3 )
+
+[node name="Books" type="Area2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Books"]
+position = Vector2( -549.791, 378.252 )
+shape = SubResource( 3 )
+
+[node name="Pencils" type="KinematicBody2D" parent="."]
+scale = Vector2( 0.75, 0.75 )
+input_pickable = true
+script = ExtResource( 2 )
+
+[node name="JESSYART1" type="Sprite" parent="Pencils"]
+position = Vector2( 661.855, 31.8946 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pencils"]
+position = Vector2( 534.354, 0 )
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sketchpad" type="KinematicBody2D" parent="."]
+position = Vector2( 203.719, -323.554 )
+scale = Vector2( 0.75, 0.75 )
+input_pickable = true
+script = ExtResource( 2 )
+
+[node name="JESSYART1" type="Sprite" parent="Sketchpad"]
+position = Vector2( 661.855, 31.8946 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sketchpad"]
+position = Vector2( 558.841, -51.145 )
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pallete" type="KinematicBody2D" parent="."]
+position = Vector2( 40, 378.252 )
+scale = Vector2( 0.75, 0.75 )
+input_pickable = true
+script = ExtResource( 2 )
+
+[node name="JESSYART1" type="Sprite" parent="pallete"]
+position = Vector2( 661.855, 31.8946 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pallete"]
+position = Vector2( 573.805, 40 )
+shape = SubResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+[connection signal="body_shape_entered" from="Art" to="." method="_on_Art_body_shape_entered"]
+[connection signal="body_shape_entered" from="Pop" to="." method="_on_Pop_body_shape_entered"]
+[connection signal="body_shape_entered" from="Books" to="." method="_on_Books_body_shape_entered"]
