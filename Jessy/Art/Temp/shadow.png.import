@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Disk_pack1.svg.png-39a5943fe4fdc06f27e66c2423eac9c4.stex"
+path="res://.import/shadow.png-dae1ada756bd4c5378ff6aea5aff1738.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Temp/Disk_pack1.svg.png"
-dest_files=[ "res://.import/Disk_pack1.svg.png-39a5943fe4fdc06f27e66c2423eac9c4.stex" ]
+source_file="res://Art/Temp/shadow.png"
+dest_files=[ "res://.import/shadow.png-dae1ada756bd4c5378ff6aea5aff1738.stex" ]
 
 [params]
 

@@ -6,6 +6,7 @@ var path = []
 onready var character = $Jessy
 
 func _process(delta):
+	
 	var walk_distance = character_speed * delta
 	move_along_path(walk_distance)
 
@@ -19,6 +20,7 @@ func _unhandled_input(event):
 
 
 func move_along_path(distance):
+	character.animation="walk"
 	var last_point = character.position
 	while path.size():
 		var distance_between_points = last_point.distance_to(path[0])
@@ -33,6 +35,7 @@ func move_along_path(distance):
 	# The character reached the end of the path.
 	character.position = last_point
 	set_process(false)
+	character.animation="idle"
 
 
 func _update_navigation_path(start_position, end_position):
