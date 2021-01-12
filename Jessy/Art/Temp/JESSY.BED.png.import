@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/escher-relativity.jpg-289edb2f4c1e4c76c9895e92622207ff.stex"
+path="res://.import/JESSY.BED.png-4eb4be2b99be3cc5575940d536e63488.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Temp/escher-relativity.jpg"
-dest_files=[ "res://.import/escher-relativity.jpg-289edb2f4c1e4c76c9895e92622207ff.stex" ]
+source_file="res://Art/Temp/JESSY.BED.png"
+dest_files=[ "res://.import/JESSY.BED.png-4eb4be2b99be3cc5575940d536e63488.stex" ]
 
 [params]
 
