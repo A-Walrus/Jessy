@@ -66,8 +66,8 @@ playing = true
 
 [node name="Shadow" type="Sprite" parent="Navigation2D/Jessy"]
 modulate = Color( 1, 1, 1, 0.2 )
-position = Vector2( 41.5613, 312.379 )
-scale = Vector2( 0.425744, 0.19336 )
+position = Vector2( 38.026, 307.076 )
+scale = Vector2( 0.355033, 0.149166 )
 z_index = -1
 texture = ExtResource( 4 )
 
