@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Patricia Taxxon - Dandelion.ogg-654cc1eb70f77156a0efeb21195d92db.oggstr"
+
+[deps]
+
+source_file="res://Audio/Music/Patricia Taxxon - Dandelion.ogg"
+dest_files=[ "res://.import/Patricia Taxxon - Dandelion.ogg-654cc1eb70f77156a0efeb21195d92db.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
