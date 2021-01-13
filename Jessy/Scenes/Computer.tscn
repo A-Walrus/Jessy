@@ -23,4 +23,3 @@ script = ExtResource( 1 )
 position = Vector2( -127.202, 34.4505 )
 current = true
 zoom = Vector2( 2, 2 )
-[connection signal="animation_finished" from="computer" to="computer" method="_on_computer_animation_finished"]
