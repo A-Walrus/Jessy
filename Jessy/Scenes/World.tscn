@@ -11,7 +11,7 @@
 [ext_resource path="res://Drawer.gd" type="Script" id=9]
 [ext_resource path="res://Art/Temp/JESSY.WINDOW.png" type="Texture" id=10]
 [ext_resource path="res://Art/Temp/shadoww.png" type="Texture" id=11]
-[ext_resource path="res://Scenes/UI.gd" type="Script" id=12]
+[ext_resource path="res://UI.gd" type="Script" id=12]
 [ext_resource path="res://goldie_boxing/f.tres" type="DynamicFont" id=13]
 [ext_resource path="res://goldie_boxing/new_theme.tres" type="Theme" id=14]
 [ext_resource path="res://Art/Temp/JESSY.BACK.png" type="Texture" id=15]
@@ -248,3 +248,4 @@ __meta__ = {
 [connection signal="input_event" from="Bed/Click" to="Bed" method="_on_Click_input_event"]
 [connection signal="input_event" from="Drawer/Area2D" to="Drawer" method="_on_Area2D_input_event"]
 [connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/sleep" to="CanvasLayer/UI" method="_on_sleep_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/computer" to="CanvasLayer/UI" method="_on_computer_pressed"]
