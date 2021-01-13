@@ -3,6 +3,8 @@ extends Navigation2D
 export(float) var character_speed = 400.0
 var path = []
 
+
+
 onready var character = $Jessy
 
 func _process(delta):
@@ -20,9 +22,12 @@ func _unhandled_input(event):
 
 
 func move_along_path(distance):
-	character.animation="walk"
 	var last_point = character.position
 	while path.size():
+		if((path[0]-character.position).y>0):
+			character.animation="walk"
+		else:
+			character.animation="bWalk"
 		var distance_between_points = last_point.distance_to(path[0])
 		# The position to move to falls between two points.
 		if distance <= distance_between_points:
@@ -35,7 +40,10 @@ func move_along_path(distance):
 	# The character reached the end of the path.
 	character.position = last_point
 	set_process(false)
-	character.animation="idle"
+	if(character.animation=="bWalk"):
+		character.animation="bIdle"
+	else:
+		character.animation="idle"
 
 
 func _update_navigation_path(start_position, end_position):
