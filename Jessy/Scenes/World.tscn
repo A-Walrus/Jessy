@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Area2D.gd" type="Script" id=2]
@@ -19,9 +19,11 @@
 [ext_resource path="res://Art/Temp/JESSY.BACK2.png" type="Texture" id=17]
 [ext_resource path="res://Cats.gd" type="Script" id=18]
 [ext_resource path="res://Art/Temp/JESSY.OPEN DOOR.png" type="Texture" id=19]
-[ext_resource path="res://Scenes/room.gd" type="Script" id=20]
-[ext_resource path="res://Scenes/Title.gd" type="Script" id=21]
-[ext_resource path="res://Scenes/TitleP.gd" type="Script" id=22]
+[ext_resource path="res://room.gd" type="Script" id=20]
+[ext_resource path="res://Title.gd" type="Script" id=21]
+[ext_resource path="res://TitleP.gd" type="Script" id=22]
+[ext_resource path="res://Call.gd" type="Script" id=23]
+[ext_resource path="res://p.gd" type="Script" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -48,6 +50,11 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 3 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk",
+"speed": 7.0
+}, {
 "frames": [ ExtResource( 17 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "bWalk",
@@ -57,11 +64,6 @@ animations = [ {
 "loop": true,
 "name": "bIdle",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "walk",
-"speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]
@@ -411,6 +413,188 @@ text = "Instagram"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Call" type="Control" parent="CanvasLayer/UI"]
+visible = false
+margin_left = 512.0
+margin_top = 300.0
+margin_right = 512.0
+margin_bottom = 300.0
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="TextureRect" parent="CanvasLayer/UI/Call"]
+margin_left = -263.0
+margin_top = -181.0
+margin_right = 262.0
+margin_bottom = 211.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V" type="VBoxContainer" parent="CanvasLayer/UI/Call"]
+margin_left = -221.0
+margin_top = -143.0
+margin_right = 220.0
+margin_bottom = 143.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleP" type="Label" parent="CanvasLayer/UI/Call/V"]
+margin_right = 441.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
+text = "Who to call"
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/Call/V"]
+margin_top = 58.0
+margin_right = 441.0
+margin_bottom = 344.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/Call/V/HBoxContainer"]
+margin_right = 218.0
+margin_bottom = 286.0
+size_flags_horizontal = 3
+
+[node name="p" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
+margin_right = 218.0
+margin_bottom = 54.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Arad"
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+call = NodePath("../../../..")
+
+[node name="p2" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
+margin_top = 58.0
+margin_right = 218.0
+margin_bottom = 112.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Sandra"
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+call = NodePath("../../../..")
+
+[node name="p3" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
+margin_top = 116.0
+margin_right = 218.0
+margin_bottom = 170.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Ron"
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+call = NodePath("../../../..")
+
+[node name="p4" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
+margin_top = 174.0
+margin_right = 218.0
+margin_bottom = 228.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Maya"
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+call = NodePath("../../../..")
+
+[node name="p5" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
+margin_top = 232.0
+margin_right = 218.0
+margin_bottom = 286.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Avital"
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+call = NodePath("../../../..")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/UI/Call/V/HBoxContainer"]
+margin_left = 222.0
+margin_right = 441.0
+margin_bottom = 286.0
+size_flags_horizontal = 3
+
+[node name="p4" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
+margin_right = 219.0
+margin_bottom = 54.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Guy"
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+call = NodePath("../../../..")
+
+[node name="p5" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
+margin_top = 58.0
+margin_right = 219.0
+margin_bottom = 112.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Liza"
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+call = NodePath("../../../..")
+
+[node name="p6" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
+margin_top = 116.0
+margin_right = 219.0
+margin_bottom = 170.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Nir"
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+call = NodePath("../../../..")
+
+[node name="p7" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
+margin_top = 174.0
+margin_right = 219.0
+margin_bottom = 228.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Rudich"
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+call = NodePath("../../../..")
 [connection signal="timeout" from="Navigation2D/room/Door" to="Navigation2D/room" method="_on_Door_timeout"]
 [connection signal="timeout" from="Navigation2D/room/FromOpen" to="Navigation2D/room" method="_on_FromOpen_timeout"]
 [connection signal="picked" from="Bed" to="CanvasLayer/UI" method="_on_Bed_picked"]
@@ -420,6 +604,7 @@ __meta__ = {
 [connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/sleep" to="CanvasLayer/UI" method="_on_sleep_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/computer" to="CanvasLayer/UI" method="_on_computer_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/phone" to="CanvasLayer/UI" method="_on_phone_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/bother people" to="CanvasLayer/UI" method="_on_bother_people_pressed"]
 [connection signal="timeout" from="CanvasLayer/UI/Food/V/Title/Timer" to="Navigation2D/room" method="_on_Timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/UI/Food/V/yes" to="CanvasLayer/UI/Food/V/Title" method="_on_yes_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/Food/V/no" to="CanvasLayer/UI/Food/V/Title" method="_on_no_pressed"]

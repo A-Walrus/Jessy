@@ -18,6 +18,10 @@ _global_script_class_icons={
 config/name="Jessy"
 run/main_scene="res://Scenes/World.tscn"
 
+[autoload]
+
+Globals="*res://globals.gd"
+
 [input]
 
 click={

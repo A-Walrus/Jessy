@@ -13,7 +13,8 @@
 [ext_resource path="res://cat.gd" type="Script" id=11]
 [ext_resource path="res://goldie_boxing/f.tres" type="DynamicFont" id=12]
 [ext_resource path="res://goldie_boxing/new_theme.tres" type="Theme" id=13]
-[ext_resource path="res://Scenes/Button.gd" type="Script" id=14]
+[ext_resource path="res://Button.gd" type="Script" id=14]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

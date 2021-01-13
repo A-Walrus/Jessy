@@ -31,3 +31,9 @@ func _on_phone_pressed():
 	show()
 	$Center/Bed.hide()
 	$Phone.show()
+
+
+func _on_bother_people_pressed():
+	show()
+	$Center/Bed.hide()
+	$Call.show()
