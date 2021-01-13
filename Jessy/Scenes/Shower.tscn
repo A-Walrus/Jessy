@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Art/Temp/JESSY.BATHROOM.png" type="Texture" id=1]
+[ext_resource path="res://Art/Temp/JESSY.SHOWER2.png" type="Texture" id=2]
+[ext_resource path="res://Art/Temp/JESSY.SHOWER3.png" type="Texture" id=3]
+[ext_resource path="res://Art/Temp/JESSY.SHOWER1.png" type="Texture" id=4]
+[ext_resource path="res://Showerr.gd" type="Script" id=5]
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "off",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "on",
+"speed": 5.0
+} ]
+
+[node name="Showerr" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "off"
+playing = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 1.5, 1.5 )

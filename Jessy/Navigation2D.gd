@@ -55,3 +55,7 @@ func _update_navigation_path(start_position, end_position):
 	# We don't need it in this example as it corresponds to the character's position.
 	path.remove(0)
 	set_process(true)
+
+
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	get_tree().change_scene("res://Scenes/Shower.tscn")

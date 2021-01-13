@@ -22,6 +22,10 @@ run/main_scene="res://Scenes/World.tscn"
 
 Globals="*res://globals.gd"
 
+[display]
+
+window/size/height=750
+
 [input]
 
 click={
