@@ -25,3 +25,9 @@ func _on_sleep_pressed():
 
 func _on_computer_pressed():
 	get_tree().change_scene("res://Scenes/Computer.tscn")
+
+
+func _on_phone_pressed():
+	show()
+	$Center/Bed.hide()
+	$Phone.show()
