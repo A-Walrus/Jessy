@@ -1,8 +1,11 @@
 extends Node2D
 
 func _ready():
-	randomize()
-	$AnimatedSprite.frame = rand_range(0,5)
+	if Globals.random:
+		randomize()
+		$AnimatedSprite.frame = rand_range(0,4)
+	else:
+		$AnimatedSprite.frame = 4
 
 func _input(event):
 	if Input.is_action_just_pressed("click"):

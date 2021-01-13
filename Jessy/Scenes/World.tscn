@@ -374,7 +374,7 @@ __meta__ = {
 margin_left = -263.0
 margin_top = -181.0
 margin_right = 262.0
-margin_bottom = 31.0
+margin_bottom = 119.0
 texture = ExtResource( 10 )
 expand = true
 __meta__ = {
@@ -415,10 +415,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="insta" type="Button" parent="CanvasLayer/UI/Phone/V"]
+[node name="Game2" type="Button" parent="CanvasLayer/UI/Phone/V"]
 margin_top = 116.0
 margin_right = 441.0
 margin_bottom = 170.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Brawlhalla"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="insta" type="Button" parent="CanvasLayer/UI/Phone/V"]
+margin_top = 174.0
+margin_right = 441.0
+margin_bottom = 228.0
 theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
@@ -624,4 +636,5 @@ call = NodePath("../../../..")
 [connection signal="pressed" from="CanvasLayer/UI/Food/V/no" to="CanvasLayer/UI/Food/V/Title" method="_on_no_pressed"]
 [connection signal="timeout" from="CanvasLayer/UI/Phone/V/TitleP/Timer" to="Navigation2D/room" method="_on_Timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/UI/Phone/V/Game" to="CanvasLayer/UI/Phone/V/TitleP" method="_on_Game_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/Phone/V/Game2" to="CanvasLayer/UI/Phone/V/TitleP" method="_on_Game2_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/Phone/V/insta" to="CanvasLayer/UI/Phone/V/TitleP" method="_on_insta_pressed"]
