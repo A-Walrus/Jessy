@@ -118,14 +118,6 @@ visible = false
 position = Vector2( -475.704, -342.344 )
 shape = SubResource( 5 )
 
-[node name="shadow" type="Sprite" parent="."]
-visible = false
-modulate = Color( 1, 1, 1, 0.498039 )
-position = Vector2( -281.152, -143.442 )
-scale = Vector2( 2.52733, 2.52733 )
-z_index = 2
-texture = ExtResource( 4 )
-
 [node name="Drawer" type="Node2D" parent="."]
 script = ExtResource( 9 )
 
