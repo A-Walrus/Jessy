@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Clean Room.gd" type="Script" id=1]
 [ext_resource path="res://drag.gd" type="Script" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Art/Temp/JESSY.ART2.png" type="Texture" id=6]
 [ext_resource path="res://Art/Temp/JESSY.ART1.png" type="Texture" id=7]
 [ext_resource path="res://goldie_boxing/font.tres" type="DynamicFont" id=8]
+[ext_resource path="res://Art/Temp/JESSY.POP1.png" type="Texture" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 208.779, 180.696 )
@@ -20,6 +21,9 @@ extents = Vector2( 86.7405, 102.2 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 152.294, 102.2 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 183.676, 101.954 )
 
 [node name="Clean Room" type="Node"]
 script = ExtResource( 1 )
@@ -86,6 +90,7 @@ shape = SubResource( 1 )
 
 [node name="Pop" type="Area2D" parent="."]
 script = ExtResource( 3 )
+a = [ NodePath("../sponge") ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pop"]
 position = Vector2( -549.791, 0 )
@@ -156,6 +161,27 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pallete"]
 position = Vector2( 573.805, 40 )
 shape = SubResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="sponge" type="KinematicBody2D" parent="."]
+position = Vector2( 375.081, 248.921 )
+scale = Vector2( 0.75, 0.75 )
+input_pickable = true
+script = ExtResource( 2 )
+
+[node name="JESSYART1" type="Sprite" parent="sponge"]
+position = Vector2( 661.855, 31.8946 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="sponge"]
+position = Vector2( 720.213, 20.7256 )
+shape = SubResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
