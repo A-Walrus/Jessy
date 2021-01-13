@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Area2D.gd" type="Script" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Art/Temp/JESSY.BACK.png" type="Texture" id=15]
 [ext_resource path="res://Art/Temp/JESSY.BACK3.png" type="Texture" id=16]
 [ext_resource path="res://Art/Temp/JESSY.BACK2.png" type="Texture" id=17]
+[ext_resource path="res://Cats.gd" type="Script" id=18]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( -593.138, 112.844, -594.516, 97.6915, -246.637, 104.706, -527.02, 112.844, -508.127, 228.982, -535.744, 228.982, -503.814, 168.894, -244.285, 175.291, -244.285, 132.341, -252.955, -322.208, -120.565, -323.33, -120.565, -254.891, 224.408, -255.168, 200.366, -253.754, 197.46, -305.491, 226.743, -328.102, 157.329, -362.165, 176.631, -493.773, 282.1, -495.319, 284.773, -334.957, 161.491, -349.678, 92.5169, -336.002, 49.7055, -299.731, 46.7325, -319.353, 26.4105, -214.501, 26.7179, 129.373, -29.6869, -258.257, -26.3364, -322.809, 25.7763, -322.522 )
@@ -57,6 +58,9 @@ extents = Vector2( 314.884, 203.615 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 107.029, 53.8945 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 123.005, 97.4004 )
 
 [node name="World" type="Node"]
 
@@ -124,8 +128,17 @@ script = ExtResource( 9 )
 [node name="Area2D" type="Area2D" parent="Drawer"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer/Area2D"]
+visible = false
 position = Vector2( -59.9977, 294.771 )
 shape = SubResource( 6 )
+
+[node name="Cats" type="Area2D" parent="."]
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cats"]
+visible = false
+position = Vector2( -503.828, -26.8261 )
+shape = SubResource( 7 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -239,5 +252,6 @@ __meta__ = {
 [connection signal="picked" from="Bed" to="CanvasLayer/UI" method="_on_Bed_picked"]
 [connection signal="input_event" from="Bed/Click" to="Bed" method="_on_Click_input_event"]
 [connection signal="input_event" from="Drawer/Area2D" to="Drawer" method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Cats" to="Cats" method="_on_Cats_input_event"]
 [connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/sleep" to="CanvasLayer/UI" method="_on_sleep_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/computer" to="CanvasLayer/UI" method="_on_computer_pressed"]
