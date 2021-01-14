@@ -1,14 +1,14 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Navigation2D.gd" type="Script" id=1]
-[ext_resource path="res://Area2D.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Clickable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/Temp/JESSY.WALK22.png" type="Texture" id=3]
 [ext_resource path="res://Art/Temp/shadow.png" type="Texture" id=4]
 [ext_resource path="res://Art/Temp/JESSY.ROOM.png" type="Texture" id=5]
 [ext_resource path="res://Art/Temp/JESSY.png" type="Texture" id=6]
 [ext_resource path="res://Art/Temp/JESSY.WALKK.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Drawer.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/Shower.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Art/Temp/JESSY.WINDOW.png" type="Texture" id=10]
 [ext_resource path="res://Art/Temp/shadoww.png" type="Texture" id=11]
 [ext_resource path="res://UI.gd" type="Script" id=12]
@@ -17,14 +17,14 @@
 [ext_resource path="res://Art/Temp/JESSY.BACK.png" type="Texture" id=15]
 [ext_resource path="res://Art/Temp/JESSY.BACK3.png" type="Texture" id=16]
 [ext_resource path="res://Art/Temp/JESSY.BACK2.png" type="Texture" id=17]
-[ext_resource path="res://Cats.gd" type="Script" id=18]
+[ext_resource path="res://Scenes/Cats.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Art/Temp/JESSY.OPEN DOOR.png" type="Texture" id=19]
 [ext_resource path="res://room.gd" type="Script" id=20]
 [ext_resource path="res://Title.gd" type="Script" id=21]
 [ext_resource path="res://TitleP.gd" type="Script" id=22]
 [ext_resource path="res://Call.gd" type="Script" id=23]
 [ext_resource path="res://p.gd" type="Script" id=24]
-[ext_resource path="res://shower.gd" type="Script" id=25]
+[ext_resource path="res://Scenes/Clean Room.tscn" type="PackedScene" id=25]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -69,21 +69,6 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 259.417, 261.519 )
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 159.382, 171.238 )
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 314.884, 203.615 )
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 107.029, 53.8945 )
-
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 123.005, 97.4004 )
-
-[sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 75.8043, 53.6985 )
 
 [node name="World" type="Node"]
 
@@ -136,51 +121,6 @@ visible = false
 shape = SubResource( 4 )
 
 [node name="Camera2D" parent="Navigation2D/Jessy" instance=ExtResource( 8 )]
-
-[node name="Bed" type="Node2D" parent="."]
-script = ExtResource( 2 )
-
-[node name="Click" type="Area2D" parent="Bed"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Click"]
-visible = false
-position = Vector2( -486.333, -306.914 )
-shape = SubResource( 5 )
-
-[node name="Stand" type="Area2D" parent="Bed"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Stand"]
-visible = false
-position = Vector2( -475.704, -342.344 )
-shape = SubResource( 6 )
-
-[node name="Drawer" type="Node2D" parent="."]
-script = ExtResource( 9 )
-
-[node name="Area2D" type="Area2D" parent="Drawer"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer/Area2D"]
-visible = false
-position = Vector2( -59.9977, 294.771 )
-shape = SubResource( 7 )
-
-[node name="Cats" type="Area2D" parent="."]
-script = ExtResource( 18 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cats"]
-visible = false
-position = Vector2( -503.828, -26.8261 )
-shape = SubResource( 8 )
-
-[node name="shower" type="Node2D" parent="."]
-script = ExtResource( 25 )
-
-[node name="Area2D" type="Area2D" parent="shower"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="shower/Area2D"]
-visible = false
-position = Vector2( 307.801, -182.401 )
-shape = SubResource( 9 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -621,13 +561,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 call = NodePath("../../../..")
+
+[node name="Shower" parent="." instance=ExtResource( 2 )]
+position = Vector2( 306.086, -178.21 )
+res = ExtResource( 9 )
+
+[node name="Drawer" parent="." instance=ExtResource( 2 )]
+position = Vector2( -65.2983, 305.019 )
+scale = Vector2( 1.613, 0.721 )
+res = ExtResource( 25 )
+
+[node name="Bed" parent="." instance=ExtResource( 2 )]
+position = Vector2( -481.906, -323.771 )
+scale = Vector2( 2.097, 2.135 )
+show = [ NodePath("../CanvasLayer/UI"), NodePath("../CanvasLayer/UI/Center/Bed") ]
+mode = "S"
+
+[node name="Cats" parent="." instance=ExtResource( 2 )]
+position = Vector2( -500.62, -31.2887 )
+scale = Vector2( 1.745, 1.404 )
+res = ExtResource( 18 )
+
+[node name="Sink" parent="." instance=ExtResource( 2 )]
+position = Vector2( 110.252, -432.719 )
+scale = Vector2( 0.432, 1.404 )
+
+[node name="Desk" parent="." instance=ExtResource( 2 )]
+position = Vector2( -141.273, -446.016 )
+scale = Vector2( 1.61, 0.883 )
 [connection signal="timeout" from="Navigation2D/room/Door" to="Navigation2D/room" method="_on_Door_timeout"]
 [connection signal="timeout" from="Navigation2D/room/FromOpen" to="Navigation2D/room" method="_on_FromOpen_timeout"]
-[connection signal="picked" from="Bed" to="CanvasLayer/UI" method="_on_Bed_picked"]
-[connection signal="input_event" from="Bed/Click" to="Bed" method="_on_Click_input_event"]
-[connection signal="input_event" from="Drawer/Area2D" to="Drawer" method="_on_Area2D_input_event"]
-[connection signal="input_event" from="Cats" to="Cats" method="_on_Cats_input_event"]
-[connection signal="input_event" from="shower/Area2D" to="shower" method="_on_Area2D_input_event"]
 [connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/sleep" to="CanvasLayer/UI" method="_on_sleep_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/computer" to="CanvasLayer/UI" method="_on_computer_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/phone" to="CanvasLayer/UI" method="_on_phone_pressed"]
