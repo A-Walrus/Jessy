@@ -37,3 +37,12 @@ func _on_bother_people_pressed():
 	show()
 	$Center/Bed.hide()
 	$Call.show()
+
+
+func _on_homework_pressed():
+	print("hi")
+	get_tree().change_scene("res://Scenes/HW.tscn")
+
+
+func _on_draw_pressed():
+	get_tree().change_scene("res://Scenes/Drawing.tscn")

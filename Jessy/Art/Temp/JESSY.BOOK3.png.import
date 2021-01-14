@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/JESSY.BOOK1.png-d939485031ef23aab1bb9ed1a22d4980.stex"
+path="res://.import/JESSY.BOOK3.png-bddd1ba96af592b6c2b7b4a8a73a6c83.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/JESSY.BOOK1.png"
-dest_files=[ "res://.import/JESSY.BOOK1.png-d939485031ef23aab1bb9ed1a22d4980.stex" ]
+source_file="res://Art/Temp/JESSY.BOOK3.png"
+dest_files=[ "res://.import/JESSY.BOOK3.png-bddd1ba96af592b6c2b7b4a8a73a6c83.stex" ]
 
 [params]
 

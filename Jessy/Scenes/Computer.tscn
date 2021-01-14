@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://computer.gd" type="Script" id=1]
+[ext_resource path="res://slideshow.gd" type="Script" id=1]
 [ext_resource path="res://Art/Temp/JESSY.COMPUTER.png" type="Texture" id=2]
 [ext_resource path="res://Art/Temp/JESSY.COMPUTER2.png" type="Texture" id=3]
 
@@ -12,14 +12,12 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="Computer" type="Node2D"]
-
-[node name="computer" type="AnimatedSprite" parent="."]
+[node name="slides" type="AnimatedSprite"]
 frames = SubResource( 1 )
 animation = "comp"
 script = ExtResource( 1 )
 
-[node name="Camera2D" type="Camera2D" parent="computer"]
+[node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -127.202, 34.4505 )
 current = true
 zoom = Vector2( 2, 2 )

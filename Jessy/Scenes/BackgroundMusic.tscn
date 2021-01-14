@@ -8,18 +8,25 @@
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 69
 
-[node name="PlayPauseMusic" type="Button" parent="CanvasLayer"]
-margin_left = 10.0
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayPauseMusic" type="Button" parent="CanvasLayer/CenterContainer"]
+margin_left = 487.0
 margin_top = 10.0
-margin_right = 80.0
-margin_bottom = 80.0
+margin_right = 537.0
+margin_bottom = 30.0
 text = "pause"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="CanvasLayer/PlayPauseMusic"]
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="CanvasLayer/CenterContainer/PlayPauseMusic"]
 stream = ExtResource( 1 )
 volume_db = -30.0
-[connection signal="pressed" from="CanvasLayer/PlayPauseMusic" to="CanvasLayer/PlayPauseMusic" method="_on_PlayPauseMusic_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/PlayPauseMusic" to="CanvasLayer/CenterContainer/PlayPauseMusic" method="_on_PlayPauseMusic_pressed"]
