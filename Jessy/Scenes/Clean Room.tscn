@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Clean Room.gd" type="Script" id=1]
 [ext_resource path="res://drag.gd" type="Script" id=2]
@@ -9,6 +9,9 @@
 [ext_resource path="res://Art/Temp/JESSY.ART1.png" type="Texture" id=7]
 [ext_resource path="res://goldie_boxing/font.tres" type="DynamicFont" id=8]
 [ext_resource path="res://Art/Temp/JESSY.POP1.png" type="Texture" id=9]
+[ext_resource path="res://Art/JESSY.BOOK3.png" type="Texture" id=10]
+[ext_resource path="res://Art/JESSY.BOOK2.png" type="Texture" id=11]
+[ext_resource path="res://Art/JESSY.BOOK1.png" type="Texture" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 208.779, 180.696 )
@@ -23,7 +26,7 @@ extents = Vector2( 86.7405, 102.2 )
 extents = Vector2( 152.294, 102.2 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 183.676, 101.954 )
+extents = Vector2( 47.356, 56.9025 )
 
 [node name="Clean Room" type="Node"]
 script = ExtResource( 1 )
@@ -98,12 +101,14 @@ shape = SubResource( 1 )
 
 [node name="Books" type="Area2D" parent="."]
 script = ExtResource( 3 )
+a = [ NodePath("../book1"), NodePath("../book2"), NodePath("../book3") ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Books"]
 position = Vector2( -549.791, 378.252 )
 shape = SubResource( 1 )
 
 [node name="Pencils" type="KinematicBody2D" parent="."]
+position = Vector2( 149.957, 40 )
 scale = Vector2( 0.75, 0.75 )
 input_pickable = true
 script = ExtResource( 2 )
@@ -180,6 +185,69 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="sponge"]
+position = Vector2( 720.213, 20.7256 )
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="book1" type="KinematicBody2D" parent="."]
+position = Vector2( -694.76, 509.252 )
+scale = Vector2( 1.7, 1.7 )
+input_pickable = true
+script = ExtResource( 2 )
+
+[node name="JESSYART1" type="Sprite" parent="book1"]
+position = Vector2( 661.855, 31.8946 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book1"]
+position = Vector2( 580.236, 110.641 )
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="book2" type="KinematicBody2D" parent="."]
+position = Vector2( -360.383, 672.176 )
+scale = Vector2( 1.7, 1.7 )
+input_pickable = true
+script = ExtResource( 2 )
+
+[node name="JESSYART1" type="Sprite" parent="book2"]
+position = Vector2( 839.165, 129.373 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book2"]
+position = Vector2( 720.213, 20.7256 )
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="book3" type="KinematicBody2D" parent="."]
+position = Vector2( -647.564, 600 )
+scale = Vector2( 1.7, 1.7 )
+input_pickable = true
+script = ExtResource( 2 )
+
+[node name="JESSYART1" type="Sprite" parent="book3"]
+position = Vector2( 670.258, 89.6327 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="book3"]
 position = Vector2( 720.213, 20.7256 )
 shape = SubResource( 5 )
 __meta__ = {
