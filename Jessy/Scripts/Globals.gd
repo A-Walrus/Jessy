@@ -12,3 +12,7 @@ func _on_click():
 
 func _on_Timer_timeout():
 	justClicked=false
+
+func _input(event):
+	if Input.is_action_just_pressed("escape"):
+		get_tree().change_scene("res://Scenes/World.tscn")
