@@ -20,8 +20,8 @@ run/main_scene="res://Scenes/World.tscn"
 
 [autoload]
 
-Globals="*res://globals.gd"
 BackgroundMusic="*res://Scenes/BackgroundMusic.tscn"
+Globals="*res://Scenes/Globals.tscn"
 
 [display]
 

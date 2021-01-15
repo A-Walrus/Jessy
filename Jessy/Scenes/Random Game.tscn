@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Random Game.gd" type="Script" id=1]
 [ext_resource path="res://Art/Temp/JESSY.RANDOM GAME1.png" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Art/Temp/JESSY.BRAWLHALLA.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Art/Temp/JESSY.ROOM.png" type="Texture" id=8]
+[ext_resource path="res://Scenes/OnClick.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/World.tscn" type="PackedScene" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -35,3 +37,7 @@ __meta__ = {
 
 [node name="Camera2D" parent="." instance=ExtResource( 7 )]
 position = Vector2( 626.179, 469.678 )
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource( 9 )
+res = ExtResource( 10 )
