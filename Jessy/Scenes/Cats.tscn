@@ -9,8 +9,8 @@
 [ext_resource path="res://Art/Temp/JESSY.CATT2.png" type="Texture" id=7]
 [ext_resource path="res://Art/Temp/JESSY.CAT HAND.png" type="Texture" id=8]
 [ext_resource path="res://Art/Temp/JESSY.CAT HAND2.png" type="Texture" id=9]
-[ext_resource path="res://drag.gd" type="Script" id=10]
-[ext_resource path="res://cat.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/drag.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/cat.gd" type="Script" id=11]
 [ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SpriteFrames" id=1]

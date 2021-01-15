@@ -1,6 +1,6 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://Navigation2D.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Clickable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/Temp/JESSY.WALK22.png" type="Texture" id=3]
 [ext_resource path="res://Art/Temp/shadow.png" type="Texture" id=4]
@@ -8,23 +8,19 @@
 [ext_resource path="res://Art/Temp/JESSY.png" type="Texture" id=6]
 [ext_resource path="res://Art/Temp/JESSY.WALKK.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Scenes/Shower.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Art/Temp/JESSY.WINDOW.png" type="Texture" id=10]
 [ext_resource path="res://Art/Temp/shadoww.png" type="Texture" id=11]
-[ext_resource path="res://UI.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=12]
 [ext_resource path="res://goldie_boxing/f.tres" type="DynamicFont" id=13]
 [ext_resource path="res://goldie_boxing/new_theme.tres" type="Theme" id=14]
 [ext_resource path="res://Art/Temp/JESSY.BACK.png" type="Texture" id=15]
 [ext_resource path="res://Art/Temp/JESSY.BACK3.png" type="Texture" id=16]
 [ext_resource path="res://Art/Temp/JESSY.BACK2.png" type="Texture" id=17]
-[ext_resource path="res://Scenes/Cats.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Art/Temp/JESSY.OPEN DOOR.png" type="Texture" id=19]
-[ext_resource path="res://room.gd" type="Script" id=20]
-[ext_resource path="res://Title.gd" type="Script" id=21]
-[ext_resource path="res://TitleP.gd" type="Script" id=22]
-[ext_resource path="res://Call.gd" type="Script" id=23]
-[ext_resource path="res://p.gd" type="Script" id=24]
-[ext_resource path="res://Scenes/Clean Room.tscn" type="PackedScene" id=25]
+[ext_resource path="res://Scripts/room.gd" type="Script" id=20]
+[ext_resource path="res://Scripts/Title.gd" type="Script" id=21]
+[ext_resource path="res://Scripts/Call.gd" type="Script" id=23]
+[ext_resource path="res://Scripts/p.gd" type="Script" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -128,7 +124,6 @@ shape = SubResource( 4 )
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -249,11 +244,6 @@ custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
 text = "what to do"
 align = 1
-script = ExtResource( 22 )
-
-[node name="Timer" type="Timer" parent="CanvasLayer/UI/Phone/V/TitleP"]
-wait_time = 0.5
-one_shot = true
 
 [node name="Game" type="Button" parent="CanvasLayer/UI/Phone/V"]
 margin_top = 58.0
@@ -263,9 +253,11 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Game"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+mode = "C"
 
 [node name="Game2" type="Button" parent="CanvasLayer/UI/Phone/V"]
 margin_top = 116.0
@@ -275,9 +267,11 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Brawlhalla"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+mode = "C"
 
 [node name="insta" type="Button" parent="CanvasLayer/UI/Phone/V"]
 margin_top = 174.0
@@ -287,9 +281,11 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Instagram"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+mode = "C"
 
 [node name="Call" type="Control" parent="CanvasLayer/UI"]
 visible = false
@@ -515,9 +511,12 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Sleep"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+scene = "Bed"
+mode = "C"
 
 [node name="computer" type="Button" parent="CanvasLayer/UI/Bed/V"]
 margin_top = 116.0
@@ -527,9 +526,12 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Computer"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+scene = "Computer"
+mode = "C"
 
 [node name="phone" type="Button" parent="CanvasLayer/UI/Bed/V"]
 margin_top = 174.0
@@ -539,9 +541,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Phone"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+show = [ NodePath("../../../Phone") ]
+hide = [ NodePath("../..") ]
+mode = "SH"
 
 [node name="bother people" type="Button" parent="CanvasLayer/UI/Bed/V"]
 margin_top = 232.0
@@ -551,9 +557,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Bother people"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+show = [ NodePath("../../../Call") ]
+hide = [ NodePath("../..") ]
+mode = "SH"
 
 [node name="Desk" type="Control" parent="CanvasLayer/UI"]
 visible = false
@@ -598,9 +608,12 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Draw"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+scene = "Drawing"
+mode = "C"
 
 [node name="homework" type="Button" parent="CanvasLayer/UI/Desk/V"]
 margin_top = 116.0
@@ -610,18 +623,21 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Homework"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+scene = "HW"
+mode = "C"
 
 [node name="Shower" parent="." instance=ExtResource( 2 )]
 position = Vector2( 306.086, -178.21 )
-res = ExtResource( 9 )
+scene = "Shower"
 
 [node name="Drawer" parent="." instance=ExtResource( 2 )]
 position = Vector2( -65.2983, 305.019 )
 scale = Vector2( 1.613, 0.721 )
-res = ExtResource( 25 )
+scene = "Clean Room"
 
 [node name="Bed" parent="." instance=ExtResource( 2 )]
 position = Vector2( -481.906, -323.771 )
@@ -632,7 +648,7 @@ mode = "S"
 [node name="Cats" parent="." instance=ExtResource( 2 )]
 position = Vector2( -500.62, -31.2887 )
 scale = Vector2( 1.745, 1.404 )
-res = ExtResource( 18 )
+scene = "Cats"
 
 [node name="Sink" parent="." instance=ExtResource( 2 )]
 position = Vector2( 110.252, -432.719 )
@@ -648,13 +664,3 @@ mode = "S"
 [connection signal="timeout" from="CanvasLayer/UI/Food/V/Title/Timer" to="Navigation2D/room" method="_on_Timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/UI/Food/V/yes" to="CanvasLayer/UI/Food/V/Title" method="_on_yes_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/Food/V/no" to="CanvasLayer/UI/Food/V/Title" method="_on_no_pressed"]
-[connection signal="timeout" from="CanvasLayer/UI/Phone/V/TitleP/Timer" to="Navigation2D/room" method="_on_Timer_timeout"]
-[connection signal="pressed" from="CanvasLayer/UI/Phone/V/Game" to="CanvasLayer/UI/Phone/V/TitleP" method="_on_Game_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Phone/V/Game2" to="CanvasLayer/UI/Phone/V/TitleP" method="_on_Game2_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Phone/V/insta" to="CanvasLayer/UI/Phone/V/TitleP" method="_on_insta_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Bed/V/sleep" to="CanvasLayer/UI" method="_on_sleep_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Bed/V/computer" to="CanvasLayer/UI" method="_on_computer_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Bed/V/phone" to="CanvasLayer/UI" method="_on_phone_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Bed/V/bother people" to="CanvasLayer/UI" method="_on_bother_people_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Desk/V/draw" to="CanvasLayer/UI" method="_on_draw_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Desk/V/homework" to="CanvasLayer/UI" method="_on_homework_pressed"]

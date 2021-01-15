@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://Clean Room.gd" type="Script" id=1]
-[ext_resource path="res://drag.gd" type="Script" id=2]
-[ext_resource path="res://Box.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/Clean Room.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/drag.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Box.gd" type="Script" id=3]
 [ext_resource path="res://Art/Temp/JESSY.ART3.png" type="Texture" id=4]
 [ext_resource path="res://Art/Temp/JESSY.CLEN ROOM.png" type="Texture" id=5]
 [ext_resource path="res://Art/Temp/JESSY.ART2.png" type="Texture" id=6]
@@ -12,6 +12,8 @@
 [ext_resource path="res://Art/Temp/JESSY.BOOK3.png" type="Texture" id=10]
 [ext_resource path="res://Art/Temp/JESSY.BOOK2.png" type="Texture" id=11]
 [ext_resource path="res://Art/Temp/JESSY.BOOK1.png" type="Texture" id=12]
+
+
 
 
 [sub_resource type="RectangleShape2D" id=1]
