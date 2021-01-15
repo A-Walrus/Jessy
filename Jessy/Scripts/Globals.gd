@@ -6,6 +6,8 @@ var random = true
 
 var justClicked = false
 
+var dragging = ""
+
 func _on_click():
 	justClicked=true
 	$Timer.start()
