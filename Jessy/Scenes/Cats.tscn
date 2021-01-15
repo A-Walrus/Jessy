@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Art/Temp/JESSY.CATT1.png" type="Texture" id=1]
 [ext_resource path="res://Art/Temp/JESSY.CAT2.png" type="Texture" id=2]
@@ -9,19 +9,12 @@
 [ext_resource path="res://Art/Temp/JESSY.CATT2.png" type="Texture" id=7]
 [ext_resource path="res://Art/Temp/JESSY.CAT HAND.png" type="Texture" id=8]
 [ext_resource path="res://Art/Temp/JESSY.CAT HAND2.png" type="Texture" id=9]
-[ext_resource path="res://drag.gd" type="Script" id=10]
-[ext_resource path="res://cat.gd" type="Script" id=11]
-[ext_resource path="res://goldie_boxing/f.tres" type="DynamicFont" id=12]
-[ext_resource path="res://goldie_boxing/new_theme.tres" type="Theme" id=13]
-[ext_resource path="res://Button.gd" type="Script" id=14]
+[ext_resource path="res://Scripts/drag.gd" type="Script" id=10]
+[ext_resource path="res://Scripts/cat.gd" type="Script" id=11]
+[ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "pet",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "idle",
@@ -31,6 +24,11 @@ animations = [ {
 "loop": true,
 "name": "playing",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "pet",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -38,11 +36,6 @@ extents = Vector2( 109.469, 71.5144 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "pet",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "idle",
@@ -51,6 +44,11 @@ animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 5 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "playing",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "pet",
 "speed": 5.0
 } ]
 
@@ -148,21 +146,8 @@ shape = SubResource( 7 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Button" type="Button" parent="CanvasLayer"]
-margin_left = 105.0
-margin_top = 35.0
-margin_right = 216.0
-margin_bottom = 89.0
-theme = ExtResource( 13 )
-custom_fonts/font = ExtResource( 12 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
-text = "Room"
-script = ExtResource( 14 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Button" parent="CanvasLayer" instance=ExtResource( 12 )]
 [connection signal="body_entered" from="Cat1/Area2D" to="Cat1" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Cat1/Area2D" to="Cat1" method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="Cat2/Area2D" to="Cat2" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Cat2/Area2D" to="Cat2" method="_on_Area2D_body_exited"]
-[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="_on_Button_pressed"]

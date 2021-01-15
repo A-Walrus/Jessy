@@ -1,0 +1,22 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/slideshow.gd" type="Script" id=1]
+[ext_resource path="res://Art/Temp/JESSY.H.W1.png" type="Texture" id=2]
+[ext_resource path="res://Art/Temp/JESSY.H.W2.png" type="Texture" id=3]
+[ext_resource path="res://Art/Temp/JESSY.H.W3.png" type="Texture" id=4]
+[ext_resource path="res://Art/Temp/JESSY.H.W4.png" type="Texture" id=5]
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="AnimatedSprite" type="AnimatedSprite"]
+position = Vector2( 534.668, 383.92 )
+scale = Vector2( 0.614996, 0.614996 )
+frames = SubResource( 1 )
+script = ExtResource( 1 )

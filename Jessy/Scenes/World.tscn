@@ -1,30 +1,26 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=26 format=2]
 
-[ext_resource path="res://Navigation2D.gd" type="Script" id=1]
-[ext_resource path="res://Area2D.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Clickable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Art/Temp/JESSY.WALK22.png" type="Texture" id=3]
 [ext_resource path="res://Art/Temp/shadow.png" type="Texture" id=4]
 [ext_resource path="res://Art/Temp/JESSY.ROOM.png" type="Texture" id=5]
 [ext_resource path="res://Art/Temp/JESSY.png" type="Texture" id=6]
 [ext_resource path="res://Art/Temp/JESSY.WALKK.png" type="Texture" id=7]
 [ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Drawer.gd" type="Script" id=9]
 [ext_resource path="res://Art/Temp/JESSY.WINDOW.png" type="Texture" id=10]
 [ext_resource path="res://Art/Temp/shadoww.png" type="Texture" id=11]
-[ext_resource path="res://UI.gd" type="Script" id=12]
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=12]
 [ext_resource path="res://goldie_boxing/f.tres" type="DynamicFont" id=13]
 [ext_resource path="res://goldie_boxing/new_theme.tres" type="Theme" id=14]
 [ext_resource path="res://Art/Temp/JESSY.BACK.png" type="Texture" id=15]
 [ext_resource path="res://Art/Temp/JESSY.BACK3.png" type="Texture" id=16]
 [ext_resource path="res://Art/Temp/JESSY.BACK2.png" type="Texture" id=17]
-[ext_resource path="res://Cats.gd" type="Script" id=18]
 [ext_resource path="res://Art/Temp/JESSY.OPEN DOOR.png" type="Texture" id=19]
-[ext_resource path="res://room.gd" type="Script" id=20]
-[ext_resource path="res://Title.gd" type="Script" id=21]
-[ext_resource path="res://TitleP.gd" type="Script" id=22]
-[ext_resource path="res://Call.gd" type="Script" id=23]
-[ext_resource path="res://p.gd" type="Script" id=24]
-[ext_resource path="res://shower.gd" type="Script" id=25]
+[ext_resource path="res://Scripts/room.gd" type="Script" id=20]
+[ext_resource path="res://Scripts/Title.gd" type="Script" id=21]
+[ext_resource path="res://Scripts/Call.gd" type="Script" id=23]
+[ext_resource path="res://Scripts/p.gd" type="Script" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -51,9 +47,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 17 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "bWalk",
+"name": "walk",
 "speed": 7.0
 }, {
 "frames": [ ExtResource( 15 ) ],
@@ -61,29 +57,14 @@ animations = [ {
 "name": "bIdle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 17 ), ExtResource( 16 ) ],
 "loop": true,
-"name": "walk",
+"name": "bWalk",
 "speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 259.417, 261.519 )
-
-[sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 159.382, 171.238 )
-
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 314.884, 203.615 )
-
-[sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 107.029, 53.8945 )
-
-[sub_resource type="RectangleShape2D" id=8]
-extents = Vector2( 123.005, 97.4004 )
-
-[sub_resource type="RectangleShape2D" id=9]
-extents = Vector2( 75.8043, 53.6985 )
 
 [node name="World" type="Node"]
 
@@ -137,57 +118,12 @@ shape = SubResource( 4 )
 
 [node name="Camera2D" parent="Navigation2D/Jessy" instance=ExtResource( 8 )]
 
-[node name="Bed" type="Node2D" parent="."]
-script = ExtResource( 2 )
-
-[node name="Click" type="Area2D" parent="Bed"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Click"]
-visible = false
-position = Vector2( -486.333, -306.914 )
-shape = SubResource( 5 )
-
-[node name="Stand" type="Area2D" parent="Bed"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed/Stand"]
-visible = false
-position = Vector2( -475.704, -342.344 )
-shape = SubResource( 6 )
-
-[node name="Drawer" type="Node2D" parent="."]
-script = ExtResource( 9 )
-
-[node name="Area2D" type="Area2D" parent="Drawer"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer/Area2D"]
-visible = false
-position = Vector2( -59.9977, 294.771 )
-shape = SubResource( 7 )
-
-[node name="Cats" type="Area2D" parent="."]
-script = ExtResource( 18 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cats"]
-visible = false
-position = Vector2( -503.828, -26.8261 )
-shape = SubResource( 8 )
-
-[node name="shower" type="Node2D" parent="."]
-script = ExtResource( 25 )
-
-[node name="Area2D" type="Area2D" parent="shower"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="shower/Area2D"]
-position = Vector2( 307.801, -182.401 )
-shape = SubResource( 9 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="UI" type="Control" parent="CanvasLayer"]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -198,95 +134,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 11 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Center" type="CenterContainer" parent="CanvasLayer/UI"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Bed" type="Control" parent="CanvasLayer/UI/Center"]
-visible = false
-margin_left = 512.0
-margin_top = 375.0
-margin_right = 512.0
-margin_bottom = 375.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Window" type="TextureRect" parent="CanvasLayer/UI/Center/Bed"]
-margin_left = -263.0
-margin_top = -181.0
-margin_right = 262.0
-margin_bottom = 181.0
-texture = ExtResource( 10 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="V" type="VBoxContainer" parent="CanvasLayer/UI/Center/Bed"]
-margin_left = -146.0
-margin_top = -143.0
-margin_right = 146.0
-margin_bottom = 143.0
-
-[node name="Bed" type="Label" parent="CanvasLayer/UI/Center/Bed/V"]
-margin_right = 292.0
-margin_bottom = 54.0
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
-text = "Bed"
-align = 1
-
-[node name="sleep" type="Button" parent="CanvasLayer/UI/Center/Bed/V"]
-margin_top = 58.0
-margin_right = 292.0
-margin_bottom = 112.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
-text = "Sleep"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="computer" type="Button" parent="CanvasLayer/UI/Center/Bed/V"]
-margin_top = 116.0
-margin_right = 292.0
-margin_bottom = 170.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
-text = "Computer"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="phone" type="Button" parent="CanvasLayer/UI/Center/Bed/V"]
-margin_top = 174.0
-margin_right = 292.0
-margin_bottom = 228.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
-text = "Phone"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="bother people" type="Button" parent="CanvasLayer/UI/Center/Bed/V"]
-margin_top = 232.0
-margin_right = 292.0
-margin_bottom = 286.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
-text = "Bother people"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -397,11 +244,6 @@ custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
 text = "what to do"
 align = 1
-script = ExtResource( 22 )
-
-[node name="Timer" type="Timer" parent="CanvasLayer/UI/Phone/V/TitleP"]
-wait_time = 0.5
-one_shot = true
 
 [node name="Game" type="Button" parent="CanvasLayer/UI/Phone/V"]
 margin_top = 58.0
@@ -411,9 +253,11 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Game"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+mode = "C"
 
 [node name="Game2" type="Button" parent="CanvasLayer/UI/Phone/V"]
 margin_top = 116.0
@@ -423,9 +267,11 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Brawlhalla"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+mode = "C"
 
 [node name="insta" type="Button" parent="CanvasLayer/UI/Phone/V"]
 margin_top = 174.0
@@ -435,9 +281,11 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Instagram"
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+mode = "C"
 
 [node name="Call" type="Control" parent="CanvasLayer/UI"]
 visible = false
@@ -620,21 +468,199 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 call = NodePath("../../../..")
+
+[node name="Bed" type="Control" parent="CanvasLayer/UI"]
+visible = false
+margin_left = 512.0
+margin_top = 375.0
+margin_right = 512.0
+margin_bottom = 375.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="TextureRect" parent="CanvasLayer/UI/Bed"]
+margin_left = -263.0
+margin_top = -181.0
+margin_right = 262.0
+margin_bottom = 181.0
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V" type="VBoxContainer" parent="CanvasLayer/UI/Bed"]
+margin_left = -146.0
+margin_top = -143.0
+margin_right = 146.0
+margin_bottom = 143.0
+
+[node name="Bed" type="Label" parent="CanvasLayer/UI/Bed/V"]
+margin_right = 292.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
+text = "Bed"
+align = 1
+
+[node name="sleep" type="Button" parent="CanvasLayer/UI/Bed/V"]
+margin_top = 58.0
+margin_right = 292.0
+margin_bottom = 112.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Sleep"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene = "Bed"
+mode = "C"
+
+[node name="computer" type="Button" parent="CanvasLayer/UI/Bed/V"]
+margin_top = 116.0
+margin_right = 292.0
+margin_bottom = 170.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Computer"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene = "Computer"
+mode = "C"
+
+[node name="phone" type="Button" parent="CanvasLayer/UI/Bed/V"]
+margin_top = 174.0
+margin_right = 292.0
+margin_bottom = 228.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Phone"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+show = [ NodePath("../../../Phone") ]
+hide = [ NodePath("../..") ]
+mode = "SH"
+
+[node name="bother people" type="Button" parent="CanvasLayer/UI/Bed/V"]
+margin_top = 232.0
+margin_right = 292.0
+margin_bottom = 286.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Bother people"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+show = [ NodePath("../../../Call") ]
+hide = [ NodePath("../..") ]
+mode = "SH"
+
+[node name="Desk" type="Control" parent="CanvasLayer/UI"]
+visible = false
+margin_left = 512.0
+margin_top = 375.0
+margin_right = 512.0
+margin_bottom = 375.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="TextureRect" parent="CanvasLayer/UI/Desk"]
+margin_left = -263.0
+margin_top = -181.0
+margin_right = 262.0
+margin_bottom = 68.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V" type="VBoxContainer" parent="CanvasLayer/UI/Desk"]
+margin_left = -146.0
+margin_top = -143.0
+margin_right = 146.0
+margin_bottom = 143.0
+
+[node name="Desk" type="Label" parent="CanvasLayer/UI/Desk/V"]
+margin_right = 292.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
+text = "Desk"
+align = 1
+
+[node name="draw" type="Button" parent="CanvasLayer/UI/Desk/V"]
+margin_top = 58.0
+margin_right = 292.0
+margin_bottom = 112.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Draw"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene = "Drawing"
+mode = "C"
+
+[node name="homework" type="Button" parent="CanvasLayer/UI/Desk/V"]
+margin_top = 116.0
+margin_right = 292.0
+margin_bottom = 170.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Homework"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene = "HW"
+mode = "C"
+
+[node name="Shower" parent="." instance=ExtResource( 2 )]
+position = Vector2( 306.086, -178.21 )
+scene = "Shower"
+
+[node name="Drawer" parent="." instance=ExtResource( 2 )]
+position = Vector2( -65.2983, 305.019 )
+scale = Vector2( 1.613, 0.721 )
+scene = "Clean Room"
+
+[node name="Bed" parent="." instance=ExtResource( 2 )]
+position = Vector2( -481.906, -323.771 )
+scale = Vector2( 2.097, 2.135 )
+show = [ NodePath("../CanvasLayer/UI"), NodePath("../CanvasLayer/UI/Bed") ]
+mode = "S"
+
+[node name="Cats" parent="." instance=ExtResource( 2 )]
+position = Vector2( -500.62, -31.2887 )
+scale = Vector2( 1.745, 1.404 )
+scene = "Cats"
+
+[node name="Sink" parent="." instance=ExtResource( 2 )]
+position = Vector2( 110.252, -432.719 )
+scale = Vector2( 0.432, 1.404 )
+
+[node name="Desk" parent="." instance=ExtResource( 2 )]
+position = Vector2( -141.273, -446.016 )
+scale = Vector2( 1.61, 0.883 )
+show = [ NodePath("../CanvasLayer/UI"), NodePath("../CanvasLayer/UI/Desk") ]
+mode = "S"
 [connection signal="timeout" from="Navigation2D/room/Door" to="Navigation2D/room" method="_on_Door_timeout"]
 [connection signal="timeout" from="Navigation2D/room/FromOpen" to="Navigation2D/room" method="_on_FromOpen_timeout"]
-[connection signal="picked" from="Bed" to="CanvasLayer/UI" method="_on_Bed_picked"]
-[connection signal="input_event" from="Bed/Click" to="Bed" method="_on_Click_input_event"]
-[connection signal="input_event" from="Drawer/Area2D" to="Drawer" method="_on_Area2D_input_event"]
-[connection signal="input_event" from="Cats" to="Cats" method="_on_Cats_input_event"]
-[connection signal="input_event" from="shower/Area2D" to="shower" method="_on_Area2D_input_event"]
-[connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/sleep" to="CanvasLayer/UI" method="_on_sleep_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/computer" to="CanvasLayer/UI" method="_on_computer_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/phone" to="CanvasLayer/UI" method="_on_phone_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Center/Bed/V/bother people" to="CanvasLayer/UI" method="_on_bother_people_pressed"]
 [connection signal="timeout" from="CanvasLayer/UI/Food/V/Title/Timer" to="Navigation2D/room" method="_on_Timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/UI/Food/V/yes" to="CanvasLayer/UI/Food/V/Title" method="_on_yes_pressed"]
 [connection signal="pressed" from="CanvasLayer/UI/Food/V/no" to="CanvasLayer/UI/Food/V/Title" method="_on_no_pressed"]
-[connection signal="timeout" from="CanvasLayer/UI/Phone/V/TitleP/Timer" to="Navigation2D/room" method="_on_Timer_timeout"]
-[connection signal="pressed" from="CanvasLayer/UI/Phone/V/Game" to="CanvasLayer/UI/Phone/V/TitleP" method="_on_Game_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Phone/V/Game2" to="CanvasLayer/UI/Phone/V/TitleP" method="_on_Game2_pressed"]
-[connection signal="pressed" from="CanvasLayer/UI/Phone/V/insta" to="CanvasLayer/UI/Phone/V/TitleP" method="_on_insta_pressed"]
