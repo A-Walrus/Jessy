@@ -178,6 +178,7 @@ script = ExtResource( 25 )
 [node name="Area2D" type="Area2D" parent="shower"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="shower/Area2D"]
+visible = false
 position = Vector2( 307.801, -182.401 )
 shape = SubResource( 9 )
 
