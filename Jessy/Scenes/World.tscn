@@ -627,9 +627,9 @@ show = [ NodePath("../CanvasLayer/UI"), NodePath("../CanvasLayer/UI/Desk") ]
 mode = "S"
 
 [node name="Bathroom" parent="." instance=ExtResource( 2 )]
-position = Vector2( 134.885, -203.868 )
+position = Vector2( 130.251, -203.868 )
 scale = Vector2( 0.49, 0.883 )
-mode = ""
+scene = "Bathroom"
 
 [node name="Drawer2" parent="." instance=ExtResource( 2 )]
 position = Vector2( -352.648, 327 )
