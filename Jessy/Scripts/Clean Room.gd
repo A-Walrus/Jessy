@@ -16,13 +16,6 @@ func check():
 			return false
 	get_tree().change_scene("res://Scenes/World.tscn")
 
-func _on_Art_body_shape_entered(body_id, body, body_shape, area_shape):
-	check()
-
-
-func _on_Pop_body_shape_entered(body_id, body, body_shape, area_shape):
-	check()
-
-
-func _on_Books_body_shape_entered(body_id, body, body_shape, area_shape):
-	check()
+func _input(event):
+	if Input.is_action_just_pressed("click"):
+		check()
