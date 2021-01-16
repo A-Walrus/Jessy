@@ -17,5 +17,5 @@ func check():
 	get_tree().change_scene("res://Scenes/World.tscn")
 
 func _input(event):
-	if Input.is_action_just_pressed("click"):
+	if Input.is_action_just_released("click"):
 		check()
