@@ -5,7 +5,7 @@ var dragable = false
 var grabbed_offset = Vector2()
 var onface = false;
 var steps = ["Blank", "Concealer","Powder","Blush","Lipstick","Eyeliner","Mascara","Blank"]
-var outfit = 1
+var outfit = Globals.outfit
 var step = 1
 
 
@@ -24,6 +24,7 @@ func _process(delta):
 		if(step < 7):
 			get_child(0).animation = steps[step+1] #str(steps[step+1])
 			get_node("../Jessy/Jessy").animation = steps[step]
+			get_node("../Jessy/Jessy").frame = outfit
 			step = step + 1
 
 func _on_Jessy_body_entered(body):

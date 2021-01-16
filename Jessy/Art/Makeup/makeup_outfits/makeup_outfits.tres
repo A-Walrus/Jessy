@@ -52,7 +52,7 @@ animations = [ {
 "name": "Lipstick",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 19 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "Blank",
 "speed": 5.0
