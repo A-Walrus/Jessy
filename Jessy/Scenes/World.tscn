@@ -7,7 +7,7 @@
 [ext_resource path="res://Art/Temp/JESSY.ROOM.png" type="Texture" id=5]
 [ext_resource path="res://Art/Temp/JESSY.png" type="Texture" id=6]
 [ext_resource path="res://Art/Temp/JESSY.WALKK.png" type="Texture" id=7]
-[ext_resource path="res://Scenes/Camera2D.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Art/Temp/JESSY.WINDOW.png" type="Texture" id=10]
 [ext_resource path="res://Art/Temp/shadoww.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=12]
@@ -257,7 +257,9 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-mode = "C"
+scene = "Phone"
+globals = [ [ "random", "r" ] ]
+mode = "CG"
 
 [node name="Game2" type="Button" parent="CanvasLayer/UI/Phone/V"]
 margin_top = 116.0
@@ -271,7 +273,9 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-mode = "C"
+scene = "Phone"
+globals = [ [ "random", "4" ] ]
+mode = "CG"
 
 [node name="insta" type="Button" parent="CanvasLayer/UI/Phone/V"]
 margin_top = 174.0
@@ -285,7 +289,9 @@ script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-mode = "C"
+scene = "Phone"
+globals = [ [ "random", "5" ] ]
+mode = "CG"
 
 [node name="Call" type="Control" parent="CanvasLayer/UI"]
 visible = false

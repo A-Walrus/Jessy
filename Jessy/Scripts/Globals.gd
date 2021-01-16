@@ -2,7 +2,7 @@ extends Node
 
 var nameCall=""
 
-var random = true
+var random = ""
 
 var justClicked = false
 
