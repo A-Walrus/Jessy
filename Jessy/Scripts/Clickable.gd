@@ -21,6 +21,7 @@ func _input(event):
 func close():
 	var vec = position - get_node("/root/World/Navigation2D/Jessy").position
 	return vec.length()<dist
+
 func _on_Clickable_mouse_entered():
 	inside=true
 
