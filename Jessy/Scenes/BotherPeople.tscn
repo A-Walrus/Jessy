@@ -3,8 +3,9 @@
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Art/Temp/JESSY.ROOM.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Art/Temp/JESSY.PHONE.CALLLL.png" type="Texture" id=4]
+[ext_resource path="res://Art/Temp/phone_call/JESSY.PHONE.CALLLL.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Label.gd" type="Script" id=5]
+
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://goldie_boxing/Goldie Boxing.ttf"
