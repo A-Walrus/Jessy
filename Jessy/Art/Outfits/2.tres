@@ -1,0 +1,31 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=2]
+
+[ext_resource path="res://Art/Temp/outfits/JESSY2.OUTFIT2.png" type="Texture" id=1]
+[ext_resource path="res://Art/Temp/outfits/JESSY2.WALKK.png" type="Texture" id=2]
+[ext_resource path="res://Art/Temp/outfits/20210114114839JESSY2.WALK2.png" type="Texture" id=3]
+[ext_resource path="res://Art/Temp/outfits/JESSY2.BACK2.png" type="Texture" id=4]
+[ext_resource path="res://Art/Temp/outfits/JESSY2.BACK1.png" type="Texture" id=5]
+[ext_resource path="res://Art/Temp/outfits/JESSY2.BACK.png" type="Texture" id=6]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "bIdle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "bWalk",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 7.0
+} ]
