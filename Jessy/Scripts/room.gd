@@ -1,7 +1,7 @@
 extends AnimatedSprite
 
-var timeShort = 90
-var timeLong = 180
+var timeShort = 10
+var timeLong = 20
 export (NodePath) var ui
 export (NodePath) var foodUI
 export (NodePath) var title
