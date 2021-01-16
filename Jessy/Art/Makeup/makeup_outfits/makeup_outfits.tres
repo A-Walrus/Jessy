@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=20 format=2]
+[gd_resource type="SpriteFrames" load_steps=19 format=2]
 
 [ext_resource path="res://Art/Makeup/makeup_outfits/JESSY.BLUSH.png" type="Texture" id=1]
 [ext_resource path="res://Art/Makeup/makeup_outfits/JESSY.LIPSTICK.png" type="Texture" id=2]
@@ -18,7 +18,6 @@
 [ext_resource path="res://Art/Makeup/makeup_outfits/JESSY.POWDER.png" type="Texture" id=16]
 [ext_resource path="res://Art/Makeup/makeup_outfits/JESSY2.EYELINER.png" type="Texture" id=17]
 [ext_resource path="res://Art/Makeup/makeup_outfits/JESSY.MASCARA.png" type="Texture" id=18]
-[ext_resource path="res://Art/Temp/JESSY.WINDOW.png" type="Texture" id=19]
 
 [resource]
 animations = [ {
@@ -52,7 +51,7 @@ animations = [ {
 "name": "Lipstick",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 16 ), ExtResource( 13 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "Blank",
 "speed": 5.0
