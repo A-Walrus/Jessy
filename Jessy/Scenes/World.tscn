@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Clickable.tscn" type="PackedScene" id=2]
@@ -19,8 +19,6 @@
 [ext_resource path="res://Art/Temp/JESSY.OPEN DOOR.png" type="Texture" id=19]
 [ext_resource path="res://Scripts/room.gd" type="Script" id=20]
 [ext_resource path="res://Scripts/Title.gd" type="Script" id=21]
-[ext_resource path="res://Scripts/Call.gd" type="Script" id=23]
-[ext_resource path="res://Scripts/p.gd" type="Script" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -299,7 +297,6 @@ margin_left = 512.0
 margin_top = 300.0
 margin_right = 512.0
 margin_bottom = 300.0
-script = ExtResource( 23 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -352,11 +349,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Arad"
-script = ExtResource( 24 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-call = NodePath("../../../..")
+scene = "BotherPeople"
+globals = [ [ "nameCall", "Arad" ] ]
+mode = "CG"
 
 [node name="p2" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
 margin_top = 58.0
@@ -366,11 +365,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Sandra"
-script = ExtResource( 24 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-call = NodePath("../../../..")
+scene = "BotherPeople"
+globals = [ [ "nameCall", "Sandra" ] ]
+mode = "CG"
 
 [node name="p3" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
 margin_top = 116.0
@@ -380,11 +381,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Ron"
-script = ExtResource( 24 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-call = NodePath("../../../..")
+scene = "BotherPeople"
+globals = [ [ "nameCall", "Ron" ] ]
+mode = "CG"
 
 [node name="p4" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
 margin_top = 174.0
@@ -394,11 +397,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Maya"
-script = ExtResource( 24 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-call = NodePath("../../../..")
+scene = "BotherPeople"
+globals = [ [ "nameCall", "Maya" ] ]
+mode = "CG"
 
 [node name="p5" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
 margin_top = 232.0
@@ -408,11 +413,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Avital"
-script = ExtResource( 24 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-call = NodePath("../../../..")
+scene = "BotherPeople"
+globals = [ [ "nameCall", "Avital" ] ]
+mode = "CG"
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/UI/Call/V/HBoxContainer"]
 margin_left = 222.0
@@ -427,11 +434,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Guy"
-script = ExtResource( 24 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-call = NodePath("../../../..")
+scene = "BotherPeople"
+globals = [ [ "nameCall", "Guy" ] ]
+mode = "CG"
 
 [node name="p5" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
 margin_top = 58.0
@@ -441,11 +450,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Liza"
-script = ExtResource( 24 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-call = NodePath("../../../..")
+scene = "BotherPeople"
+globals = [ [ "nameCall", "Liza" ] ]
+mode = "CG"
 
 [node name="p6" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
 margin_top = 116.0
@@ -455,11 +466,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Nir"
-script = ExtResource( 24 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-call = NodePath("../../../..")
+scene = "BotherPeople"
+globals = [ [ "nameCall", "Nir" ] ]
+mode = "CG"
 
 [node name="p7" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
 margin_top = 174.0
@@ -469,11 +482,13 @@ theme = ExtResource( 14 )
 custom_fonts/font = ExtResource( 13 )
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Rudich"
-script = ExtResource( 24 )
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-call = NodePath("../../../..")
+scene = "BotherPeople"
+globals = [ [ "nameCall", "Rudich" ] ]
+mode = "CG"
 
 [node name="Bed" type="Control" parent="CanvasLayer/UI"]
 visible = false
@@ -659,12 +674,18 @@ scene = "Cats"
 [node name="Sink" parent="." instance=ExtResource( 2 )]
 position = Vector2( 110.252, -432.719 )
 scale = Vector2( 0.432, 1.404 )
+mode = ""
 
 [node name="Desk" parent="." instance=ExtResource( 2 )]
 position = Vector2( -141.273, -446.016 )
 scale = Vector2( 1.61, 0.883 )
 show = [ NodePath("../CanvasLayer/UI"), NodePath("../CanvasLayer/UI/Desk") ]
 mode = "S"
+
+[node name="Bathroom" parent="." instance=ExtResource( 2 )]
+position = Vector2( 134.885, -203.868 )
+scale = Vector2( 0.49, 0.883 )
+mode = ""
 [connection signal="timeout" from="Navigation2D/room/Door" to="Navigation2D/room" method="_on_Door_timeout"]
 [connection signal="timeout" from="Navigation2D/room/FromOpen" to="Navigation2D/room" method="_on_FromOpen_timeout"]
 [connection signal="timeout" from="CanvasLayer/UI/Food/V/Title/Timer" to="Navigation2D/room" method="_on_Timer_timeout"]

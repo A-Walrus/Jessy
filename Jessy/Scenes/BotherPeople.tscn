@@ -2,11 +2,9 @@
 
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Art/Temp/JESSY.ROOM.png" type="Texture" id=2]
-[ext_resource path="res://Instagram.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Art/Temp/JESSY.PHONE.CALLLL.png" type="Texture" id=4]
 [ext_resource path="res://Scripts/Label.gd" type="Script" id=5]
-
-
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://goldie_boxing/Goldie Boxing.ttf"
@@ -16,7 +14,6 @@ size = 80
 font_data = SubResource( 1 )
 
 [node name="Bother people" type="Node"]
-script = ExtResource( 3 )
 
 [node name="JESSYPHONECALLLL" type="Sprite" parent="."]
 position = Vector2( 547.685, 231.988 )
@@ -47,3 +44,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" parent="CanvasLayer" instance=ExtResource( 3 )]
