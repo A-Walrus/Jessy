@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/slideshow.gd" type="Script" id=1]
 [ext_resource path="res://Art/Temp/JESSY.H.W1.png" type="Texture" id=2]
 [ext_resource path="res://Art/Temp/JESSY.H.W2.png" type="Texture" id=3]
 [ext_resource path="res://Art/Temp/JESSY.H.W3.png" type="Texture" id=4]
 [ext_resource path="res://Art/Temp/JESSY.H.W4.png" type="Texture" id=5]
-
+[ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -20,3 +20,7 @@ position = Vector2( 534.668, 383.92 )
 scale = Vector2( 0.614996, 0.614996 )
 frames = SubResource( 1 )
 script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" parent="CanvasLayer" instance=ExtResource( 6 )]

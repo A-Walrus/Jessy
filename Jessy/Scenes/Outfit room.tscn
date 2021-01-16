@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Jessy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://goldie_boxing/new_theme.tres" type="Theme" id=3]
+[ext_resource path="res://Art/icons/JESSY.NEXT PAGE ARROW.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=5]
+
+[node name="Outift room" type="Node2D"]
+
+[node name="Jessy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 515.201, 359.477 )
+scale = Vector2( 0.33002, 0.33002 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 707.0
+margin_top = 292.0
+margin_right = 846.0
+margin_bottom = 431.0
+theme = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+functions = [ [ "outfit", 1 ] ]
+mode = "F"
+
+[node name="next" type="Sprite" parent="Button"]
+position = Vector2( 196.946, 166 )
+scale = Vector2( 0.466346, 0.466345 )
+texture = ExtResource( 4 )
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 251.185
+margin_top = 292.0
+margin_right = 390.185
+margin_bottom = 431.0
+theme = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+functions = [ [ "outfit", -1 ] ]
+mode = "F"
+
+[node name="next" type="Sprite" parent="Button2"]
+position = Vector2( -68.763, 166 )
+scale = Vector2( 0.466346, 0.466345 )
+texture = ExtResource( 4 )
+flip_h = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" parent="CanvasLayer" instance=ExtResource( 5 )]

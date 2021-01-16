@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Art/Outfits/1.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Art/Temp/shadow.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Jessy.gd" type="Script" id=4]
+[ext_resource path="res://Art/Outfits/3.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://Art/Outfits/2.tres" type="SpriteFrames" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 259.417, 261.519 )
+
+[node name="Jessy" type="AnimatedSprite"]
+position = Vector2( -238.375, -264.037 )
+scale = Vector2( 0.2, 0.2 )
+z_index = 1
+frames = ExtResource( 1 )
+animation = "idle"
+playing = true
+script = ExtResource( 4 )
+outfits = [ ExtResource( 1 ), ExtResource( 6 ), ExtResource( 5 ) ]
+
+[node name="Shadow" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.2 )
+position = Vector2( 38.026, 307.076 )
+scale = Vector2( 0.355033, 0.149166 )
+z_index = -1
+texture = ExtResource( 3 )
+
+[node name="kine" type="KinematicBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kine"]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 9.15527e-05 )

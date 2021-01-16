@@ -4,6 +4,7 @@ export (Array, NodePath) var show = []
 export (Array, NodePath) var hide = []
 export  (String)  var  scene
 export (Array,Array) var globals
+export (Array,Array) var functions
 
 export var  mode = ''
 
@@ -19,10 +20,13 @@ func pressed():
 				get_node(s).show()
 			for h in hide:
 				get_node(h).hide()
-		Globals._on_click()
 		if mode.find('G')!=-1:
 			for global in globals:
 				Globals.set(global[0],global[1])
+		if mode.find('F')!=-1:
+			for funct in functions:
+				Globals.call(funct[0],funct[1])
+		Globals._on_click()
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
