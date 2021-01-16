@@ -1,0 +1,59 @@
+[gd_resource type="SpriteFrames" load_steps=20 format=2]
+
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY.BLUSH.png" type="Texture" id=1]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY.LIPSTICK.png" type="Texture" id=2]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY3.POWDER.png" type="Texture" id=3]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY2.BLUSH.png" type="Texture" id=4]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY.CONCEALER.png" type="Texture" id=5]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY3.BLUSH.png" type="Texture" id=6]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY2.CONCEALER.png" type="Texture" id=7]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY3.CONCEALER.png" type="Texture" id=8]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY3.LIPSTICK.png" type="Texture" id=9]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY.EYELINER.png" type="Texture" id=10]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY2.MASACARA.png" type="Texture" id=11]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY3.MASCARA.png" type="Texture" id=12]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY2.POWDER.png" type="Texture" id=13]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY3.EYELINER.png" type="Texture" id=14]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY2.LIPSTICK.png" type="Texture" id=15]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY.POWDER.png" type="Texture" id=16]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY2.EYELINER.png" type="Texture" id=17]
+[ext_resource path="res://Art/Makeup/makeup_outfits/JESSY.MASCARA.png" type="Texture" id=18]
+[ext_resource path="res://Art/Temp/JESSY.WINDOW.png" type="Texture" id=19]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Blush",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 17 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "Eyeliner",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 13 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Powder",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 11 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "Mascara",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "Concealer",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 15 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "Lipstick",
+"speed": 0.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "Blank",
+"speed": 5.0
+} ]
