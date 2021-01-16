@@ -1,0 +1,38 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Camera2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Art/Temp/JESSY.ROOM.png" type="Texture" id=2]
+[ext_resource path="res://Art/Temp/JESSY.instagram.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Phone.gd" type="Script" id=4]
+[ext_resource path="res://Art/Temp/JESSY.BRAWLHALLA.png" type="Texture" id=5]
+[ext_resource path="res://Art/Temp/JESSY.RANDOM GAME3.png" type="Texture" id=6]
+[ext_resource path="res://Art/Temp/JESSY.RANDOM GAME1.png" type="Texture" id=7]
+[ext_resource path="res://Art/Temp/JESSY.RANDOM GAME2.png" type="Texture" id=8]
+[ext_resource path="res://Art/Temp/JESSY.RANDOM GAME4.png" type="Texture" id=9]
+[ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 6 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="JESSYROOM" type="Sprite" parent="."]
+position = Vector2( 532.358, 543.481 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 318.892, 364.414 )
+
+[node name="Phone" type="AnimatedSprite" parent="."]
+position = Vector2( 454.229, 438.234 )
+frames = SubResource( 1 )
+script = ExtResource( 4 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" parent="CanvasLayer" instance=ExtResource( 10 )]

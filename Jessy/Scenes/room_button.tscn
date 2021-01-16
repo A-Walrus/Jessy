@@ -19,4 +19,3 @@ __meta__ = {
 }
 scene = "World"
 mode = "C"
-[connection signal="pressed" from="." to="." method="_on_Button_pressed"]
