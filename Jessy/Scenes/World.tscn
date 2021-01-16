@@ -614,6 +614,7 @@ scene = "Cats"
 [node name="Sink" parent="." instance=ExtResource( 2 )]
 position = Vector2( 110.252, -432.719 )
 scale = Vector2( 0.432, 1.404 )
+scene = "Makeup"
 
 [node name="Desk" parent="." instance=ExtResource( 2 )]
 position = Vector2( -141.273, -446.016 )
