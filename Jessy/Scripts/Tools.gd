@@ -26,6 +26,9 @@ func _process(delta):
 			get_node("../Jessy/Jessy").animation = steps[step]
 			get_node("../Jessy/Jessy").frame = outfit
 			step = step + 1
+			if(step == 7):
+				get_node("../Button").show()
+			
 
 func _on_Jessy_body_entered(body):
 	onface = true
