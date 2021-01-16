@@ -115,7 +115,6 @@ __meta__ = {
 margin_right = 441.0
 margin_bottom = 54.0
 custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
 text = "Do you want to eat?"
 align = 1
 script = ExtResource( 21 )
@@ -184,7 +183,6 @@ __meta__ = {
 margin_right = 441.0
 margin_bottom = 54.0
 custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
 text = "what to do"
 align = 1
 
@@ -270,7 +268,6 @@ __meta__ = {
 margin_right = 441.0
 margin_bottom = 54.0
 custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
 text = "Who to call"
 align = 1
 
@@ -465,7 +462,6 @@ margin_bottom = 143.0
 margin_right = 292.0
 margin_bottom = 54.0
 custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
 text = "Bed"
 align = 1
 
@@ -562,7 +558,6 @@ margin_bottom = 143.0
 margin_right = 292.0
 margin_bottom = 54.0
 custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.978667, 0.36, 1 )
 text = "Desk"
 align = 1
 
