@@ -12,6 +12,7 @@ func _input(event):
 		if Input.is_action_just_pressed("click") and inside and close():
 			if mode=="C":
 				get_tree().change_scene("res://Scenes/"+scene+".tscn")
+				Globals.lastpos = get_node("../Navigation2D/Jessy").position
 			elif mode=="S":
 				for a in show:
 					get_node(a).show()

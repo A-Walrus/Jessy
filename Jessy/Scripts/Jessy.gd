@@ -6,6 +6,9 @@ export (Array,Resource) var outfits
 func _ready():
 	change()
 	Globals.connect("outfit",self,"change")
+	position = Globals.lastpos
+	if(get_tree().get_current_scene().get_name() == "Outift room"):
+		position = Vector2(515.201,359.477)
 
 
 func change():

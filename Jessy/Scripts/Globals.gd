@@ -12,6 +12,8 @@ var outfit = 0
 
 signal outfit
 
+var lastpos = Vector2(-238.375,-264.037)
+
 func _on_click():
 	justClicked=true
 	$Timer.start()
