@@ -24,7 +24,7 @@ func _process(delta):
 	
 func _input(event):
 	if event is InputEventMouseMotion and onhair:
-		trans = trans - 0.005
+		trans = trans - (0.005 / (abs(event.get_relative().y)+1))
 	if(trans <= 0):
 		get_node("../Button").show()
 	
