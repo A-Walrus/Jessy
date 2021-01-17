@@ -591,6 +591,70 @@ __meta__ = {
 scene = "HW"
 mode = "C"
 
+[node name="Sink" type="Control" parent="CanvasLayer/UI"]
+visible = false
+margin_left = 512.0
+margin_top = 375.0
+margin_right = 512.0
+margin_bottom = 375.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Window" type="TextureRect" parent="CanvasLayer/UI/Sink"]
+margin_left = -263.0
+margin_top = -181.0
+margin_right = 262.0
+margin_bottom = 68.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V" type="VBoxContainer" parent="CanvasLayer/UI/Sink"]
+margin_left = -146.0
+margin_top = -143.0
+margin_right = 146.0
+margin_bottom = 143.0
+
+[node name="Title" type="Label" parent="CanvasLayer/UI/Sink/V"]
+margin_right = 292.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 13 )
+text = "Mirror"
+align = 1
+
+[node name="Makeup" type="Button" parent="CanvasLayer/UI/Sink/V"]
+margin_top = 58.0
+margin_right = 292.0
+margin_bottom = 112.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Makeup"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene = "Makeup"
+mode = "C"
+
+[node name="Cut Bangs" type="Button" parent="CanvasLayer/UI/Sink/V"]
+margin_top = 116.0
+margin_right = 292.0
+margin_bottom = 170.0
+theme = ExtResource( 14 )
+custom_fonts/font = ExtResource( 13 )
+custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+text = "Cut bangs"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+scene = "Haircut"
+mode = "C"
+
 [node name="Shower" parent="." instance=ExtResource( 2 )]
 position = Vector2( 306.086, -178.21 )
 scene = "Shower"
@@ -614,7 +678,8 @@ scene = "Cats"
 [node name="Sink" parent="." instance=ExtResource( 2 )]
 position = Vector2( 110.252, -432.719 )
 scale = Vector2( 0.432, 1.404 )
-scene = "Makeup"
+show = [ NodePath("../CanvasLayer/UI"), NodePath("../CanvasLayer/UI/Sink") ]
+mode = "S"
 
 [node name="Desk" parent="." instance=ExtResource( 2 )]
 position = Vector2( -141.273, -446.016 )
