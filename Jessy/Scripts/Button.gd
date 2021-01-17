@@ -15,6 +15,8 @@ func pressed():
 	if not Globals.justClicked:
 		if mode.find('C')!=-1:
 			get_tree().change_scene("res://Scenes/"+scene+".tscn")
+			if get_node("/root/World/Navigation2D/Jessy")!=null:
+				Globals.lastpos = get_node("/root/World/Navigation2D/Jessy").position
 		if mode.find('SH')!=-1:
 			for s in show:
 				get_node(s).show()
