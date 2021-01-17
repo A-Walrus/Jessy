@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/192440__craigsnedeker__shower-from-outside-door.ogg-2ee63657fbe7f60f66f50cae81e0e2ff.oggstr"
+
+[deps]
+
+source_file="res://Audio/Sound_Effects/192440__craigsnedeker__shower-from-outside-door.ogg"
+dest_files=[ "res://.import/192440__craigsnedeker__shower-from-outside-door.ogg-2ee63657fbe7f60f66f50cae81e0e2ff.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
