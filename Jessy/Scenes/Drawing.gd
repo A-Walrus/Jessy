@@ -9,5 +9,6 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if Globals.drawing!=null:
-		add_child(Globals.drawing)
-		Globals.drawing.show()
+		var a = Globals.drawing.duplicate()
+		add_child(a)
+		a.show()
