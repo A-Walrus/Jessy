@@ -3,9 +3,10 @@ extends Navigation2D
 export(float) var character_speed = 400.0
 var path = []
 
-
-
 onready var character = $Jessy
+
+
+
 
 func _process(delta):
 	

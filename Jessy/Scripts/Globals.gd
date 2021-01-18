@@ -10,6 +10,8 @@ var dragging = ""
 
 var outfit = 0
 
+var drawing
+
 signal outfit
 
 var lastpos = Vector2(-238.375,-264.037)
