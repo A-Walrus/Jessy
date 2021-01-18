@@ -1,19 +1,24 @@
 extends Node
 
+export (Array,Resource) var brushes
+export var index = 0
 var line
 var pos
 
+export (Rect2) var page_bounds
+
+func _ready():
+	page_bounds = Rect2($CanvasLayer/Margin.rect_position,$CanvasLayer/Margin.rect_size)
+
 func _input(event):
 	if Input.is_action_pressed("click"):
-		pos = event.position
+		if page_bounds.has_point(event.position):
+			pos = event.position
 	if Input.is_action_just_pressed("click"):
-		line = Line2D.new()
-		line.end_cap_mode=Line2D.LINE_CAP_ROUND
-		line.joint_mode=Line2D.LINE_JOINT_ROUND
-		line.default_color=Color(0,0,0)
-		line.width=5
-		$Container.add_child(line)
-		$Timer.start()
+		if page_bounds.has_point(event.position):
+			line = brushes[index].instance()
+			$Container.add_child(line)
+			$Timer.start()
 	if Input.is_action_just_released("click"):
 		$Timer.stop()
 

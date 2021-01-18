@@ -7,6 +7,8 @@ export var dist = 300
 
 var inside = false
 
+signal press
+
 func _input(event):
 	if not Globals.justClicked:
 		if Input.is_action_just_pressed("click") and inside and close():
@@ -17,12 +19,16 @@ func _input(event):
 			elif mode=="S":
 				for a in show:
 					get_node(a).show()
+			emit_signal("press")
 			Globals._on_click()
 
 
 func close():
-	var vec = position - get_node("/root/World/Navigation2D/Jessy").position
-	return vec.length()<dist
+	if dist!=-1:
+		var vec = position - get_node("/root/World/Navigation2D/Jessy").position
+		return vec.length()<dist
+	else:
+		return -1
 
 func _on_Clickable_mouse_entered():
 	inside=true
