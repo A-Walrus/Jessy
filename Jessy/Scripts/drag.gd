@@ -1,4 +1,5 @@
 extends KinematicBody2D
+class_name drag
 
 # Pickable needs to be selected from the inspector
 
