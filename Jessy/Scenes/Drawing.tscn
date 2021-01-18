@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scripts/Drawing.gd" type="Script" id=1]
 [ext_resource path="res://goldie_boxing/new_theme.tres" type="Theme" id=2]
@@ -6,10 +6,11 @@
 [ext_resource path="res://Scenes/Brushes/Brush.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Art/Temp/JESSY.DRAWING.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/Clickable.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Brushes/Pencil.tscn" type="PackedScene" id=7]
 
 [node name="Drawing" type="Node"]
 script = ExtResource( 1 )
-brushes = [ ExtResource( 4 ) ]
+brushes = [ ExtResource( 7 ), ExtResource( 4 ) ]
 page_bounds = Rect2( 100, 180, 800, 600 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -54,10 +55,25 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Clickable" parent="." instance=ExtResource( 6 )]
+[node name="Eraser" parent="." instance=ExtResource( 6 )]
 position = Vector2( 679.386, 187.266 )
 scale = Vector2( 0.728, 0.497 )
 dist = -1
+
+[node name="Pencil" parent="." instance=ExtResource( 6 )]
+position = Vector2( 773.861, 448.529 )
+scale = Vector2( 0.288, 2.297 )
+mode = ""
+dist = -1
+
+[node name="Pen" parent="." instance=ExtResource( 6 )]
+position = Vector2( 875.336, 448.529 )
+rotation = 1.12225
+scale = Vector2( 1.97795, 0.303794 )
+mode = ""
+dist = -1
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_Button_pressed"]
-[connection signal="press" from="Clickable" to="." method="_on_Button_pressed"]
+[connection signal="press" from="Eraser" to="." method="_on_Button_pressed"]
+[connection signal="press" from="Pencil" to="." method="change_brush" binds= [ 0 ]]
+[connection signal="press" from="Pen" to="." method="change_brush" binds= [ 1 ]]

@@ -31,3 +31,6 @@ func _on_Timer_timeout():
 func _on_Button_pressed():
 	for child in $Container.get_children():
 		child.queue_free()
+
+func change_brush(i):
+	index=i
