@@ -5,6 +5,8 @@ export var index = 0
 var line
 var pos
 
+
+
 export (Rect2) var page_bounds
 
 func _ready():

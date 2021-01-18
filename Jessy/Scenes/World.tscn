@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Clickable.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Jessy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drawing.gd" type="Script" id=4]
 [ext_resource path="res://Art/Temp/JESSY.ROOM.png" type="Texture" id=5]
 [ext_resource path="res://Art/Temp/JESSY.WINDOW.png" type="Texture" id=10]
 [ext_resource path="res://Art/Temp/movement_outfits/shadoww.png" type="Texture" id=11]
@@ -696,6 +697,14 @@ scene = "Bathroom"
 position = Vector2( -352.648, 327 )
 scale = Vector2( 1.33, 0.402999 )
 scene = "Outfit room"
+
+[node name="Drawing" type="Node2D" parent="."]
+position = Vector2( -141.273, -652.137 )
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
 [connection signal="timeout" from="Navigation2D/room/Door" to="Navigation2D/room" method="_on_Door_timeout"]
 [connection signal="timeout" from="Navigation2D/room/FromOpen" to="Navigation2D/room" method="_on_FromOpen_timeout"]
 [connection signal="timeout" from="CanvasLayer/UI/Food/V/Title/Timer" to="Navigation2D/room" method="_on_Timer_timeout"]
