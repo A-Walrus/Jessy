@@ -62,7 +62,7 @@ extents = Vector2( 28.4196, 58.9417 )
 extents = Vector2( 72.3719, 58.9417 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 49.5167, 58.9417 )
+extents = Vector2( 75.8513, 58.9417 )
 
 [node name="Cats" type="Node2D"]
 
@@ -141,7 +141,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hand"]
-position = Vector2( -38.8631, 103.727 )
+position = Vector2( -13.274, 105.622 )
 shape = SubResource( 7 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
