@@ -17,14 +17,14 @@ func reset():
 	get_node(no).show()
 
 func _on_yes_pressed():
-	text="incorrect"
+	text="Incorrect"
 	get_node(yes).hide()
 	get_node(no).hide()
 	$Timer.start()
 
 
 func _on_no_pressed():
-	text="correct"
+	text="Correct"
 	get_node(yes).hide()
 	get_node(no).hide()
 	$Timer.start()

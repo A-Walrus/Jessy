@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scripts/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Clickable.tscn" type="PackedScene" id=2]
@@ -6,11 +6,10 @@
 [ext_resource path="res://Scripts/UI.gd" type="Script" id=4]
 [ext_resource path="res://Art/Temp/JESSY.ROOM.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/DrawingDisplay.gd" type="Script" id=6]
+[ext_resource path="res://theme.tres" type="Theme" id=7]
 [ext_resource path="res://Art/Temp/JESSY.WINDOW.png" type="Texture" id=10]
 [ext_resource path="res://Art/Temp/movement_outfits/shadoww.png" type="Texture" id=11]
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=12]
-[ext_resource path="res://goldie_boxing/f.tres" type="DynamicFont" id=13]
-[ext_resource path="res://goldie_boxing/new_theme.tres" type="Theme" id=14]
 [ext_resource path="res://Art/Temp/JESSY.OPEN DOOR.png" type="Texture" id=19]
 [ext_resource path="res://Scripts/room.gd" type="Script" id=20]
 [ext_resource path="res://Scripts/Title.gd" type="Script" id=21]
@@ -69,6 +68,7 @@ __meta__ = {
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 7 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -97,7 +97,7 @@ __meta__ = {
 [node name="Window" type="TextureRect" parent="CanvasLayer/UI/Food"]
 margin_left = -263.0
 margin_top = -181.0
-margin_right = 262.0
+margin_right = 334.0
 margin_bottom = 31.0
 texture = ExtResource( 10 )
 expand = true
@@ -115,9 +115,8 @@ __meta__ = {
 }
 
 [node name="Title" type="Label" parent="CanvasLayer/UI/Food/V"]
-margin_right = 441.0
-margin_bottom = 54.0
-custom_fonts/font = ExtResource( 13 )
+margin_right = 512.0
+margin_bottom = 63.0
 text = "Do you want to eat?"
 align = 1
 script = ExtResource( 21 )
@@ -129,24 +128,18 @@ wait_time = 0.5
 one_shot = true
 
 [node name="yes" type="Button" parent="CanvasLayer/UI/Food/V"]
-margin_top = 58.0
-margin_right = 441.0
-margin_bottom = 112.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_top = 67.0
+margin_right = 512.0
+margin_bottom = 113.0
 text = "Yes"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="no" type="Button" parent="CanvasLayer/UI/Food/V"]
-margin_top = 116.0
-margin_right = 441.0
-margin_bottom = 170.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_top = 117.0
+margin_right = 512.0
+margin_bottom = 163.0
 text = "No"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -166,7 +159,7 @@ __meta__ = {
 margin_left = -263.0
 margin_top = -181.0
 margin_right = 262.0
-margin_bottom = 119.0
+margin_bottom = 85.0
 texture = ExtResource( 10 )
 expand = true
 __meta__ = {
@@ -184,18 +177,14 @@ __meta__ = {
 
 [node name="TitleP" type="Label" parent="CanvasLayer/UI/Phone/V"]
 margin_right = 441.0
-margin_bottom = 54.0
-custom_fonts/font = ExtResource( 13 )
-text = "what to do"
+margin_bottom = 63.0
+text = "Phone"
 align = 1
 
 [node name="Game" type="Button" parent="CanvasLayer/UI/Phone/V"]
-margin_top = 58.0
+margin_top = 67.0
 margin_right = 441.0
-margin_bottom = 112.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 113.0
 text = "Game"
 script = ExtResource( 12 )
 __meta__ = {
@@ -206,12 +195,9 @@ globals = [ [ "random", "r" ] ]
 mode = "CG"
 
 [node name="Game2" type="Button" parent="CanvasLayer/UI/Phone/V"]
-margin_top = 116.0
+margin_top = 117.0
 margin_right = 441.0
-margin_bottom = 170.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 163.0
 text = "Brawlhalla"
 script = ExtResource( 12 )
 __meta__ = {
@@ -222,12 +208,9 @@ globals = [ [ "random", "4" ] ]
 mode = "CG"
 
 [node name="insta" type="Button" parent="CanvasLayer/UI/Phone/V"]
-margin_top = 174.0
+margin_top = 167.0
 margin_right = 441.0
-margin_bottom = 228.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 213.0
 text = "Instagram"
 script = ExtResource( 12 )
 __meta__ = {
@@ -251,7 +234,7 @@ __meta__ = {
 margin_left = -263.0
 margin_top = -181.0
 margin_right = 262.0
-margin_bottom = 211.0
+margin_bottom = 192.0
 texture = ExtResource( 10 )
 expand = true
 __meta__ = {
@@ -269,30 +252,26 @@ __meta__ = {
 
 [node name="TitleP" type="Label" parent="CanvasLayer/UI/Call/V"]
 margin_right = 441.0
-margin_bottom = 54.0
-custom_fonts/font = ExtResource( 13 )
+margin_bottom = 63.0
 text = "Who to call"
 align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/UI/Call/V"]
-margin_top = 58.0
+margin_top = 67.0
 margin_right = 441.0
-margin_bottom = 344.0
+margin_bottom = 313.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/UI/Call/V/HBoxContainer"]
 margin_right = 218.0
-margin_bottom = 286.0
+margin_bottom = 246.0
 size_flags_horizontal = 3
 
 [node name="p" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
 margin_right = 218.0
-margin_bottom = 54.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 46.0
 text = "Arad"
 script = ExtResource( 12 )
 __meta__ = {
@@ -303,12 +282,9 @@ globals = [ [ "nameCall", "Arad" ] ]
 mode = "CG"
 
 [node name="p2" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
-margin_top = 58.0
+margin_top = 50.0
 margin_right = 218.0
-margin_bottom = 112.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 96.0
 text = "Sandra"
 script = ExtResource( 12 )
 __meta__ = {
@@ -319,12 +295,9 @@ globals = [ [ "nameCall", "Sandra" ] ]
 mode = "CG"
 
 [node name="p3" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
-margin_top = 116.0
+margin_top = 100.0
 margin_right = 218.0
-margin_bottom = 170.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 146.0
 text = "Ron"
 script = ExtResource( 12 )
 __meta__ = {
@@ -335,12 +308,9 @@ globals = [ [ "nameCall", "Ron" ] ]
 mode = "CG"
 
 [node name="p4" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
-margin_top = 174.0
+margin_top = 150.0
 margin_right = 218.0
-margin_bottom = 228.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 196.0
 text = "Maya"
 script = ExtResource( 12 )
 __meta__ = {
@@ -351,12 +321,9 @@ globals = [ [ "nameCall", "Maya" ] ]
 mode = "CG"
 
 [node name="p5" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer"]
-margin_top = 232.0
+margin_top = 200.0
 margin_right = 218.0
-margin_bottom = 286.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 246.0
 text = "Avital"
 script = ExtResource( 12 )
 __meta__ = {
@@ -369,15 +336,12 @@ mode = "CG"
 [node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/UI/Call/V/HBoxContainer"]
 margin_left = 222.0
 margin_right = 441.0
-margin_bottom = 286.0
+margin_bottom = 246.0
 size_flags_horizontal = 3
 
 [node name="p4" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
 margin_right = 219.0
-margin_bottom = 54.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 46.0
 text = "Guy"
 script = ExtResource( 12 )
 __meta__ = {
@@ -388,12 +352,9 @@ globals = [ [ "nameCall", "Guy" ] ]
 mode = "CG"
 
 [node name="p5" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
-margin_top = 58.0
+margin_top = 50.0
 margin_right = 219.0
-margin_bottom = 112.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 96.0
 text = "Liza"
 script = ExtResource( 12 )
 __meta__ = {
@@ -404,12 +365,9 @@ globals = [ [ "nameCall", "Liza" ] ]
 mode = "CG"
 
 [node name="p6" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
-margin_top = 116.0
+margin_top = 100.0
 margin_right = 219.0
-margin_bottom = 170.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 146.0
 text = "Nir"
 script = ExtResource( 12 )
 __meta__ = {
@@ -420,12 +378,9 @@ globals = [ [ "nameCall", "Nir" ] ]
 mode = "CG"
 
 [node name="p7" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
-margin_top = 174.0
+margin_top = 150.0
 margin_right = 219.0
-margin_bottom = 228.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 196.0
 text = "Rudich"
 script = ExtResource( 12 )
 __meta__ = {
@@ -449,8 +404,9 @@ __meta__ = {
 margin_left = -263.0
 margin_top = -181.0
 margin_right = 262.0
-margin_bottom = 181.0
+margin_bottom = 143.0
 texture = ExtResource( 10 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -463,17 +419,14 @@ margin_bottom = 143.0
 
 [node name="Bed" type="Label" parent="CanvasLayer/UI/Bed/V"]
 margin_right = 292.0
-margin_bottom = 54.0
-custom_fonts/font = ExtResource( 13 )
+margin_bottom = 63.0
 text = "Bed"
 align = 1
 
 [node name="sleep" type="Button" parent="CanvasLayer/UI/Bed/V"]
-margin_top = 58.0
+margin_top = 67.0
 margin_right = 292.0
-margin_bottom = 112.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
+margin_bottom = 113.0
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Sleep"
 script = ExtResource( 12 )
@@ -484,11 +437,9 @@ scene = "Bed"
 mode = "C"
 
 [node name="computer" type="Button" parent="CanvasLayer/UI/Bed/V"]
-margin_top = 116.0
+margin_top = 117.0
 margin_right = 292.0
-margin_bottom = 170.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
+margin_bottom = 163.0
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Computer"
 script = ExtResource( 12 )
@@ -499,11 +450,9 @@ scene = "Computer"
 mode = "C"
 
 [node name="phone" type="Button" parent="CanvasLayer/UI/Bed/V"]
-margin_top = 174.0
+margin_top = 167.0
 margin_right = 292.0
-margin_bottom = 228.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
+margin_bottom = 213.0
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Phone"
 script = ExtResource( 12 )
@@ -515,11 +464,9 @@ hide = [ NodePath("../..") ]
 mode = "SH"
 
 [node name="bother people" type="Button" parent="CanvasLayer/UI/Bed/V"]
-margin_top = 232.0
+margin_top = 217.0
 margin_right = 292.0
-margin_bottom = 286.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
+margin_bottom = 263.0
 custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
 text = "Bother people"
 script = ExtResource( 12 )
@@ -544,7 +491,7 @@ __meta__ = {
 margin_left = -263.0
 margin_top = -181.0
 margin_right = 262.0
-margin_bottom = 68.0
+margin_bottom = 45.0
 texture = ExtResource( 10 )
 expand = true
 __meta__ = {
@@ -559,18 +506,14 @@ margin_bottom = 143.0
 
 [node name="Desk" type="Label" parent="CanvasLayer/UI/Desk/V"]
 margin_right = 292.0
-margin_bottom = 54.0
-custom_fonts/font = ExtResource( 13 )
+margin_bottom = 63.0
 text = "Desk"
 align = 1
 
 [node name="draw" type="Button" parent="CanvasLayer/UI/Desk/V"]
-margin_top = 58.0
+margin_top = 67.0
 margin_right = 292.0
-margin_bottom = 112.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 113.0
 text = "Draw"
 script = ExtResource( 12 )
 __meta__ = {
@@ -580,12 +523,9 @@ scene = "Drawing"
 mode = "C"
 
 [node name="homework" type="Button" parent="CanvasLayer/UI/Desk/V"]
-margin_top = 116.0
+margin_top = 117.0
 margin_right = 292.0
-margin_bottom = 170.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 163.0
 text = "Homework"
 script = ExtResource( 12 )
 __meta__ = {
@@ -608,7 +548,7 @@ __meta__ = {
 margin_left = -263.0
 margin_top = -181.0
 margin_right = 262.0
-margin_bottom = 68.0
+margin_bottom = 45.0
 texture = ExtResource( 10 )
 expand = true
 __meta__ = {
@@ -620,21 +560,20 @@ margin_left = -146.0
 margin_top = -143.0
 margin_right = 146.0
 margin_bottom = 143.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Title" type="Label" parent="CanvasLayer/UI/Sink/V"]
 margin_right = 292.0
-margin_bottom = 54.0
-custom_fonts/font = ExtResource( 13 )
+margin_bottom = 63.0
 text = "Mirror"
 align = 1
 
 [node name="Makeup" type="Button" parent="CanvasLayer/UI/Sink/V"]
-margin_top = 58.0
+margin_top = 67.0
 margin_right = 292.0
-margin_bottom = 112.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 113.0
 text = "Makeup"
 script = ExtResource( 12 )
 __meta__ = {
@@ -644,12 +583,9 @@ scene = "Makeup"
 mode = "C"
 
 [node name="Cut Bangs" type="Button" parent="CanvasLayer/UI/Sink/V"]
-margin_top = 116.0
+margin_top = 117.0
 margin_right = 292.0
-margin_bottom = 170.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 163.0
 text = "Cut bangs"
 script = ExtResource( 12 )
 __meta__ = {

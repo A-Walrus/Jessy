@@ -2,9 +2,11 @@
 
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Jessy.tscn" type="PackedScene" id=2]
-[ext_resource path="res://goldie_boxing/new_theme.tres" type="Theme" id=3]
+[ext_resource path="res://theme.tres" type="Theme" id=3]
 [ext_resource path="res://Art/icons/JESSY.NEXT PAGE ARROW.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=5]
+
+
 
 [node name="Outift room" type="Node2D"]
 

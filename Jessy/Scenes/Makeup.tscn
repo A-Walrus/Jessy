@@ -64,7 +64,5 @@ margin_left = 782.647
 margin_top = 376.697
 margin_right = 893.647
 margin_bottom = 430.697
-[connection signal="mouse_entered" from="Tools" to="Tools" method="_on_Tools_mouse_entered"]
-[connection signal="mouse_exited" from="Tools" to="Tools" method="_on_Tools_mouse_exited"]
 [connection signal="body_entered" from="Jessy" to="Tools" method="_on_Jessy_body_entered"]
 [connection signal="body_exited" from="Jessy" to="Tools" method="_on_Jessy_body_exited"]
