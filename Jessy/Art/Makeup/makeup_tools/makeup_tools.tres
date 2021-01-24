@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=2]
+
+[ext_resource path="res://Art/Makeup/makeup_tools/CONCEALER.png" type="Texture" id=1]
+[ext_resource path="res://Art/Makeup/makeup_tools/MASCARA.png" type="Texture" id=2]
+[ext_resource path="res://Art/Makeup/makeup_tools/BLUSH.png" type="Texture" id=3]
+[ext_resource path="res://Art/Makeup/makeup_tools/LIPSTICK.png" type="Texture" id=4]
+[ext_resource path="res://Art/Makeup/makeup_tools/POWDER.png" type="Texture" id=5]
+[ext_resource path="res://Art/Makeup/makeup_tools/EYELINER.png" type="Texture" id=6]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Blush",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Eyeliner",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Powder",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Mascara",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Concealer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Lipstick",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Blank",
+"speed": 5.0
+} ]

@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Art/Makeup/JESSY.MAKEUP BACKGROUND.png" type="Texture" id=1]
+[ext_resource path="res://Art/Makeup/Haircut/JESSY.SCISSORS1.png" type="Texture" id=2]
+[ext_resource path="res://Art/Makeup/Haircut/JESSY.SCISSORS2.png" type="Texture" id=3]
+[ext_resource path="res://Art/Makeup/Haircut/JESSY.SCISSORS3.png" type="Texture" id=4]
+[ext_resource path="res://Art/Makeup/Haircut/Haircut_long.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://Scripts/Scissors.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 232.354, 150.021 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "scissors",
+"speed": 3.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 179.614, 105.399 )
+
+[node name="Node" type="Node"]
+
+[node name="Jessy" type="Area2D" parent="."]
+position = Vector2( -110.998, 0 )
+z_index = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Jessy_long" type="AnimatedSprite" parent="Jessy"]
+position = Vector2( 473.73, 525.387 )
+scale = Vector2( 1.10709, 1.10709 )
+z_index = 1
+frames = ExtResource( 5 )
+animation = "Long"
+
+[node name="Jessy_short" type="AnimatedSprite" parent="Jessy"]
+position = Vector2( 473.73, 525.387 )
+scale = Vector2( 1.10709, 1.10709 )
+frames = ExtResource( 5 )
+animation = "Short"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jessy"]
+position = Vector2( 509.909, 261.629 )
+z_index = 1
+shape = SubResource( 1 )
+
+[node name="Scissors" type="KinematicBody2D" parent="."]
+z_index = 2
+input_pickable = true
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Scissors"]
+position = Vector2( 779.207, 214.63 )
+scale = Vector2( 0.387732, 0.387732 )
+frames = SubResource( 2 )
+animation = "scissors"
+frame = 2
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Scissors"]
+position = Vector2( 822.131, 150.473 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 513.31, 370.006 )
+scale = Vector2( 0.653348, 0.653348 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Button" parent="." instance=ExtResource( 7 )]
+visible = false
+margin_left = 782.647
+margin_top = 376.697
+margin_right = 893.647
+margin_bottom = 430.697
+[connection signal="body_entered" from="Jessy" to="Scissors" method="_on_Jessy_body_entered"]
+[connection signal="body_exited" from="Jessy" to="Scissors" method="_on_Jessy_body_exited"]

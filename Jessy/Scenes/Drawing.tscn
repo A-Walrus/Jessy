@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Drawing.gd" type="Script" id=1]
+[ext_resource path="res://theme.tres" type="Theme" id=2]
+[ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Brushes/Brush.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Art/Temp/JESSY.DRAWING.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/Clickable.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Brushes/Pencil.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scripts/get_drawing.gd" type="Script" id=8]
+
+
+
+[node name="Drawing" type="Node"]
+script = ExtResource( 1 )
+brushes = [ ExtResource( 7 ), ExtResource( 4 ) ]
+page_bounds = Rect2( 100, 180, 800, 600 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.001
+
+[node name="Container" type="Node" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="JESSYDRAWING" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 586.123, 253.188 )
+scale = Vector2( 0.868423, 0.868423 )
+texture = ExtResource( 5 )
+
+[node name="Margin" type="Panel" parent="CanvasLayer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 180.0
+margin_top = 219.0
+margin_right = -285.0
+margin_bottom = -147.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" parent="CanvasLayer" instance=ExtResource( 3 )]
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -137.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = 74.0
+grow_horizontal = 0
+theme = ExtResource( 2 )
+text = "Clear"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Eraser" parent="." instance=ExtResource( 6 )]
+position = Vector2( 679.386, 187.266 )
+scale = Vector2( 0.728, 0.497 )
+dist = -1
+
+[node name="Pencil" parent="." instance=ExtResource( 6 )]
+position = Vector2( 773.861, 448.529 )
+scale = Vector2( 0.288, 2.297 )
+mode = ""
+dist = -1
+
+[node name="Pen" parent="." instance=ExtResource( 6 )]
+position = Vector2( 875.336, 448.529 )
+rotation = 1.12225
+scale = Vector2( 1.97795, 0.303794 )
+mode = ""
+dist = -1
+
+[node name="Saved Drawing" type="Sprite" parent="."]
+visible = false
+region_enabled = true
+region_rect = Rect2( 180, 219, 559, 384 )
+script = ExtResource( 8 )
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_Button_pressed"]
+[connection signal="press" from="Eraser" to="." method="_on_Button_pressed"]
+[connection signal="press" from="Pencil" to="." method="change_brush" binds= [ 0 ]]
+[connection signal="press" from="Pen" to="." method="change_brush" binds= [ 1 ]]
