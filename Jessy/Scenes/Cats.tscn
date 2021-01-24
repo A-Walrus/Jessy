@@ -15,7 +15,6 @@
 [ext_resource path="res://goldie_boxing/new_theme.tres" type="Theme" id=13]
 [ext_resource path="res://Button.gd" type="Script" id=14]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
@@ -34,10 +33,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 109.469, 71.5144 )
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
@@ -55,16 +54,16 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 84.394, 112.771 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 28.4196, 58.9417 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 72.3719, 58.9417 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 49.5167, 58.9417 )
 
 [node name="Cats" type="Node2D"]
@@ -81,12 +80,12 @@ script = ExtResource( 11 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cat1/Area2D"]
 position = Vector2( -233.701, 64.3622 )
-shape = SubResource( 7 )
+shape = SubResource( 2 )
 
 [node name="Cat2" type="AnimatedSprite" parent="."]
 position = Vector2( -496.437, -115.246 )
 z_index = 1
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "idle"
 playing = true
 script = ExtResource( 11 )
@@ -98,7 +97,7 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cat2/Area2D"]
 position = Vector2( -50.1729, 0 )
-shape = SubResource( 6 )
+shape = SubResource( 4 )
 
 [node name="BG" type="Sprite" parent="."]
 texture = ExtResource( 4 )
@@ -124,12 +123,12 @@ texture = ExtResource( 9 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HandFish2"]
 position = Vector2( -184.6, 210.971 )
 z_index = 5
-shape = SubResource( 3 )
+shape = SubResource( 5 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HandFish2"]
 position = Vector2( -147.68, -50.9846 )
 z_index = 5
-shape = SubResource( 5 )
+shape = SubResource( 6 )
 
 [node name="Hand" type="KinematicBody2D" parent="."]
 position = Vector2( 342.426, -265.556 )
@@ -145,7 +144,7 @@ texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hand"]
 position = Vector2( -38.8631, 103.727 )
-shape = SubResource( 4 )
+shape = SubResource( 7 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

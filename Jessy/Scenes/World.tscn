@@ -51,6 +51,11 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 3 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "walk",
+"speed": 7.0
+}, {
 "frames": [ ExtResource( 17 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "bWalk",
@@ -60,11 +65,6 @@ animations = [ {
 "loop": true,
 "name": "bIdle",
 "speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "walk",
-"speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=4]
@@ -95,6 +95,9 @@ position = Vector2( 4.02824, -1.71472 )
 frames = SubResource( 1 )
 animation = "close"
 script = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
 ui = NodePath("../../CanvasLayer/UI")
 foodUI = NodePath("../../CanvasLayer/UI/Food")
 title = NodePath("../../CanvasLayer/UI/Food/V/Title")

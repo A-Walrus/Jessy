@@ -31,23 +31,26 @@ var defaultData = {"food no":{"total":1, "description":"say no to food", "accomp
 
 func _ready():
 	read_achivements()
-	_show_popup()
+	#_show_popup()
+
 func read_achivements():
 	var text
 	if file.file_exists("user://achivements.json"):
-		file.open("user://achivements.json")
+		file.open("user://achivements.json",file.READ)
 		text = file.get_as_text()
 		dict = parse_json(text)
 		file.close()
 	else:
 		file.open("user://achivements.json", file.WRITE)
-		file.store_string(defaultData.to_json())
+		file.store_string(to_json(defaultData))
 		file.close()
 		dict = defaultData
+
 func write_achivements():
 	file.open("user://achivements.json", file.WRITE)
-	file.store_string(dict.to_json())
+	file.store_string(to_json(dict))
 	file.close()
+
 func modify_achivements(achivement, value):
 	if value == 0:
 		dict[achivement].accomplished = 0
@@ -57,6 +60,7 @@ func modify_achivements(achivement, value):
 	if dict[achivement].accomplished >= dict[achivement].total:
 		popup.get_node("Name").set_text(dict[achivement].name)
 		_show_popup()
+
 func _show_popup():
 	popup.show()
 	tween.interpolate_property(popup, "rect_position", Vector2(popup.rect_position.x, popup.rect_position.y), Vector2(popup.rect_position.x, popup.rect_position.y - 250), 1, tween.TRANS_BACK, tween.EASE_OUT)
