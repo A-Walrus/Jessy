@@ -1,7 +1,7 @@
 extends AnimatedSprite
 
-var timeShort = 10
-var timeLong = 20
+var timeShort = 15
+var timeLong = 90
 export (NodePath) var ui
 export (NodePath) var foodUI
 export (NodePath) var title
@@ -12,8 +12,11 @@ func _ready():
 
 
 func _on_Door_timeout():
-	animation="open"
-	$FromOpen.start()
+	if get_node(ui).is_visible()==false:
+		animation="open"
+		$FromOpen.start()
+	else:
+		$Door.start(rand_range(timeShort,timeLong))
 	
 
 
