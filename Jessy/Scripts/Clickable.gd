@@ -14,6 +14,12 @@ func _input(event):
 		if Input.is_action_just_pressed("click") and inside and close():
 			if mode=="C":
 				get_tree().change_scene("res://Scenes/"+scene+".tscn")
+				if scene == "Bathroom":
+					Achievements.get_node('a').modify_achievements("Pepepopo" ,1)
+					Achievements.get_node('a').modify_achievements("PEPEPOPO" ,1)
+				if scene == "Shower":
+					Achievements.get_node('a').modify_achievements("clean jessy" ,1)
+					Achievements.get_node('a').modify_achievements("very clean jessy" ,1)
 				if get_node("/root/World/Navigation2D/Jessy")!=null:
 					Globals.lastpos = get_node("/root/World/Navigation2D/Jessy").position
 			elif mode=="S":

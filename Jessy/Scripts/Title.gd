@@ -24,6 +24,8 @@ func _on_yes_pressed():
 
 
 func _on_no_pressed():
+	Achievements.get_node('a').modify_achievements("food no" ,1)
+	Achievements.get_node('a').modify_achievements("FOOD NOOO" ,1)
 	text="Correct"
 	get_node(yes).hide()
 	get_node(no).hide()

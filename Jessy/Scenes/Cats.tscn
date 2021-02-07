@@ -73,6 +73,7 @@ frames = SubResource( 1 )
 animation = "idle"
 playing = true
 script = ExtResource( 11 )
+cat_name = "pet tomy"
 
 [node name="Area2D" type="Area2D" parent="Cat1"]
 
@@ -90,6 +91,7 @@ script = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
+cat_name = "pet sammy"
 
 [node name="Area2D" type="Area2D" parent="Cat2"]
 
@@ -147,6 +149,8 @@ shape = SubResource( 7 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Button" parent="CanvasLayer" instance=ExtResource( 12 )]
+
+[node name="Timer" type="Timer" parent="."]
 [connection signal="body_entered" from="Cat1/Area2D" to="Cat1" method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Cat1/Area2D" to="Cat1" method="_on_Area2D_body_exited"]
 [connection signal="body_entered" from="Cat2/Area2D" to="Cat2" method="_on_Area2D_body_entered"]
