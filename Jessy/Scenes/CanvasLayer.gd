@@ -67,6 +67,7 @@ func modify_achievements(achievement, value):
 func _show_popup():
 	popup.show()
 	tween.interpolate_property(popup, "rect_position", Vector2(popup.rect_position.x, popup.rect_position.y), Vector2(popup.rect_position.x, popup.rect_position.y - 250), 1, tween.TRANS_BACK, tween.EASE_OUT)
+	print("hello")
 	tween.start()
 	timer.start()
 
