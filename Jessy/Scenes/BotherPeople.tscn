@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Art/Temp/JESSY.ROOM.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scripts/Label.gd" type="Script" id=5]
 [ext_resource path="res://Audio/phone/ARAD_VOICE.wav" type="AudioStream" id=6]
 [ext_resource path="res://Audio/phone/Guy.wav" type="AudioStream" id=7]
+[ext_resource path="res://Scripts/BotherPeople.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://goldie_boxing/Goldie Boxing.ttf"
@@ -16,6 +17,7 @@ size = 80
 font_data = SubResource( 1 )
 
 [node name="Bother people" type="Node"]
+script = ExtResource( 8 )
 
 [node name="JESSYPHONECALLLL" type="Sprite" parent="."]
 position = Vector2( 547.685, 231.988 )
