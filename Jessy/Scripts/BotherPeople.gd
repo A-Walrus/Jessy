@@ -2,5 +2,5 @@ extends Node
 
 
 func _input(event):
-	if event is InputEventMouseButton and !event.pressed:
+	if event.is_action_released("click"):
 		get_tree().change_scene("res://Scenes/World.tscn")
