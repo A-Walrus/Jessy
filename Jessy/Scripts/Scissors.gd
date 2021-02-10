@@ -5,6 +5,8 @@ var dragable = false
 var grabbed_offset = Vector2()
 var onhair = false
 var trans = 1
+var oldMousePos = get_global_mouse_position()
+var rng = RandomNumberGenerator.new()
 
 func _ready():
 	get_node("../Jessy/Jessy_long").frame = Globals.outfit
@@ -21,10 +23,18 @@ func _process(delta):
 	else:
 		position = initpos
 	get_node("../Jessy/Jessy_long").set_modulate(Color(1,1,1,trans))
+	if(!onhair or get_global_mouse_position() == oldMousePos):
+		$Hair.emitting = false
+	oldMousePos = get_global_mouse_position()
 	
 func _input(event):
 	if event is InputEventMouseMotion and onhair:
-		trans = trans - (0.005 / (abs(event.get_relative().y)+1))
+		var d = (0.005 / (abs(event.get_relative().y)+1))
+		trans = trans - d
+		if(d> 0.00025 and !trans <= 0):
+			$Hair.emitting = true
+		else:
+			$Hair.emitting = false
 	if(trans <= 0):
 		get_node("../Button").show()
 	

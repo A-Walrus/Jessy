@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Art/Makeup/JESSY.MAKEUP BACKGROUND.png" type="Texture" id=1]
 [ext_resource path="res://Art/Makeup/Haircut/JESSY.SCISSORS1.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Art/Makeup/Haircut/Haircut_long.tres" type="SpriteFrames" id=5]
 [ext_resource path="res://Scripts/Scissors.gd" type="Script" id=6]
 [ext_resource path="res://Scenes/room_button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Art/Makeup/Haircut/hair1.png" type="Texture" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 232.354, 150.021 )
@@ -20,7 +21,30 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 179.614, 105.399 )
+extents = Vector2( 117.869, 46.473 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.828025, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0.894118, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+width = 2085
+
+[sub_resource type="ParticlesMaterial" id=6]
+emission_shape = 2
+emission_box_extents = Vector3( 60, 5, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 25.14
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 73.23
+angular_velocity = 481.41
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.66
+color_ramp = SubResource( 5 )
 
 [node name="Node" type="Node"]
 
@@ -53,21 +77,29 @@ shape = SubResource( 1 )
 z_index = 2
 input_pickable = true
 script = ExtResource( 6 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Scissors"]
 position = Vector2( 779.207, 214.63 )
 scale = Vector2( 0.387732, 0.387732 )
+z_index = 1
 frames = SubResource( 2 )
 animation = "scissors"
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Scissors"]
-position = Vector2( 822.131, 150.473 )
+position = Vector2( 763.131, 151.473 )
 shape = SubResource( 3 )
+
+[node name="Hair" type="Particles2D" parent="Scissors"]
+position = Vector2( 737.244, 162.874 )
+amount = 13
+lifetime = 2.28
+speed_scale = 1.42
+visibility_rect = Rect2( -100, -100, 200, 400 )
+local_coords = false
+process_material = SubResource( 6 )
+texture = ExtResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 513.31, 370.006 )
