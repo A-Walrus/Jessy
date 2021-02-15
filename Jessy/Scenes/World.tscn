@@ -194,6 +194,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 scene = "Phone"
+Pscene = "random game"
 globals = [ [ "random", "r" ] ]
 mode = "CG"
 
@@ -207,6 +208,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 scene = "Phone"
+Pscene = "brawlhalla"
 globals = [ [ "random", "4" ] ]
 mode = "CG"
 
@@ -220,6 +222,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 scene = "Phone"
+Pscene = "instagram"
 globals = [ [ "random", "5" ] ]
 mode = "CG"
 
@@ -464,6 +467,7 @@ __meta__ = {
 }
 show = [ NodePath("../../../Phone") ]
 hide = [ NodePath("../..") ]
+scene = "phone"
 mode = "SH"
 
 [node name="bother people" type="Button" parent="CanvasLayer/UI/Bed/V"]
@@ -478,6 +482,7 @@ __meta__ = {
 }
 show = [ NodePath("../../../Call") ]
 hide = [ NodePath("../..") ]
+scene = "Bother"
 mode = "SH"
 
 [node name="Desk" type="Control" parent="CanvasLayer/UI"]

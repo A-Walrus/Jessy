@@ -7,6 +7,8 @@ func _input(event):
 			var a =frame
 			frame+=1
 			if frame==a:
+				Achievements.get_node('a').modify_achievements("suicidal thoughts" ,1)
+				Achievements.get_node('a').modify_achievements("JESSY DONT DO IT" ,1)
 				get_tree().change_scene("res://Scenes/World.tscn")
 		Globals.justClicked
 		

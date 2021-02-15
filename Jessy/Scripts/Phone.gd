@@ -12,3 +12,4 @@ func _ready():
 		frame = rand_range(0,4)
 	else:
 		frame = int(Globals.random)
+

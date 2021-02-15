@@ -27,7 +27,7 @@ func _input(event):
 		trans = trans - (0.005 / (abs(event.get_relative().y)+1))
 	if(trans <= 0):
 		get_node("../Button").show()
-	
+
 
 
 func _on_Jessy_body_entered(body):
