@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Scripts/slideshow.gd" type="Script" id=1]
 [ext_resource path="res://Art/Temp/JESSY.COMPUTER.png" type="Texture" id=2]
@@ -13,10 +13,20 @@
 [ext_resource path="res://barvaz +knife/5.png" type="Texture" id=11]
 [ext_resource path="res://barvaz +knife/9.png" type="Texture" id=12]
 [ext_resource path="res://barvaz +knife/3.png" type="Texture" id=13]
+[ext_resource path="res://barvaz +knife/12.png" type="Texture" id=14]
+[ext_resource path="res://barvaz +knife/15.png" type="Texture" id=15]
+[ext_resource path="res://barvaz +knife/19.png" type="Texture" id=16]
+[ext_resource path="res://barvaz +knife/14.png" type="Texture" id=17]
+[ext_resource path="res://barvaz +knife/18.png" type="Texture" id=18]
+[ext_resource path="res://barvaz +knife/20.png" type="Texture" id=19]
+[ext_resource path="res://barvaz +knife/13.png" type="Texture" id=20]
+[ext_resource path="res://barvaz +knife/17.png" type="Texture" id=21]
+[ext_resource path="res://barvaz +knife/16.png" type="Texture" id=22]
+[ext_resource path="res://barvaz +knife/11.png" type="Texture" id=23]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 6 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 8 ), ExtResource( 11 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 23 ), ExtResource( 14 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 22 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 19 ) ],
 "loop": true,
 "name": "comp",
 "speed": 5.0
