@@ -15,8 +15,8 @@ func _input(event):
 			if mode=="C":
 				get_tree().change_scene("res://Scenes/"+scene+".tscn")
 				if scene == "Bathroom":
-					Achievements.get_node('a').modify_achievements("Pepepopo" ,1)
-					Achievements.get_node('a').modify_achievements("PEPEPOPO" ,1)
+					Achievements.get_node('a').modify_achievements("Peepeepopo" ,1)
+					Achievements.get_node('a').modify_achievements("PEEPEEPOPO" ,1)
 				if scene == "Clean Room":
 					Achievements.get_node('a').modify_achievements("happy mom" ,1)
 					Achievements.get_node('a').modify_achievements("happy mom very very" ,1)

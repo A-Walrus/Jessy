@@ -644,6 +644,11 @@ position = Vector2( -352.648, 327 )
 scale = Vector2( 1.33, 0.402999 )
 scene = "Outfit room"
 
+[node name="Drawer3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -639.649, 232 )
+scale = Vector2( 0.509222, -0.671907 )
+scene = "AchievementsBoard"
+
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( -141, -650 )
 scale = Vector2( 0.3, 0.3 )

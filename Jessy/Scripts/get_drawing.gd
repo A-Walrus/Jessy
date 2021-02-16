@@ -8,7 +8,6 @@ extends Sprite
 func _exit_tree():
 	if get_tree().get_current_scene().get_name() == "Drawing":
 		region_rect = get_node("/root/Drawing").page_bounds
-		print("helo")
 		var img = get_viewport().get_texture().get_data()
 		var itex = ImageTexture.new()
 		img.flip_y()

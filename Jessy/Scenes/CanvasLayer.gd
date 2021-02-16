@@ -23,8 +23,8 @@ var defaultData = {"food no":{"total":1, "description":"say no to food", "accomp
 "clean jessy":{"total":1, "description":"go to the shower", "accomplished":0, "name":"clean jessy", "done":0},
 "jessy not masrihoola":{"total":6, "description":"go to the shower 6 times", "accomplished":0, "name":"jessy not masrihoola", "done":0},
 "instajess":{"total":15, "description":"enter instagram 15 times", "accomplished":0, "name":"instajess", "done":0},
-"Pepepopo":{"total":1, "description":"go to the toilet", "accomplished":0, "name":"Pepepopo", "done":0},
-"PEPEPOPO":{"total":10, "description":"go to the toilet 10 times", "accomplished":0, "name":"PEPEPOPO", "done":0},
+"Peepeepopo":{"total":1, "description":"go to the toilet", "accomplished":0, "name":"Peepeepopo", "done":0},
+"PEEPEEPOPO":{"total":10, "description":"go to the toilet 10 times", "accomplished":0, "name":"PEEPEEPOPO", "done":0},
 "happy mom":{"total":1, "description":"clean your room ", "accomplished":0, "name":"happy mom", "done":0},
 "happy mom very very":{"total":10, "description":"clean your room 10 times", "accomplished":0, "name":"happy mom very very", "done":0},
 "goodbye world":{"total":120, "description":"sleep for 2 minutes", "accomplished":0, "name":"goodbye world", "done":0}
@@ -67,7 +67,7 @@ func modify_achievements(achievement, value):
 func _show_popup():
 	popup.show()
 	tween.interpolate_property(popup, "rect_position", Vector2(popup.rect_position.x, popup.rect_position.y), Vector2(popup.rect_position.x, popup.rect_position.y - 250), 1, tween.TRANS_BACK, tween.EASE_OUT)
-	print("hello")
+
 	tween.start()
 	timer.start()
 

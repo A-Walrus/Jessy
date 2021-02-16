@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://JESSY.ACHIEVEMENTS.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Achievement.gd" type="Script" id=3]
+[ext_resource path="res://goldie_boxing/fffff.tres" type="DynamicFont" id=4]
+
+[node name="Achievement" type="HBoxContainer"]
+margin_right = 324.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Medal" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 30.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 30, 40 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="."]
+margin_left = 34.0
+margin_top = 6.0
+margin_right = 98.0
+margin_bottom = 34.0
+custom_fonts/font = ExtResource( 4 )
+text = "Thing"
+align = 1
+
+[node name="Amount" type="Label" parent="."]
+margin_left = 102.0
+margin_top = 6.0
+margin_right = 324.0
+margin_bottom = 34.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 4 )
+text = "1/2"
+align = 2
+[connection signal="gui_input" from="." to="." method="_on_Achievement_gui_input"]
