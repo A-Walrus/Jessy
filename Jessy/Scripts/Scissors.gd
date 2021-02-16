@@ -37,7 +37,7 @@ func _input(event):
 			$Hair.emitting = false
 	if(trans <= 0):
 		get_node("../Button").show()
-	
+
 
 
 func _on_Jessy_body_entered(body):

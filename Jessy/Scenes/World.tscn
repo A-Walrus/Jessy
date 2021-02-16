@@ -41,6 +41,9 @@ script = ExtResource( 1 )
 frames = SubResource( 1 )
 animation = "close"
 script = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
 ui = NodePath("../../CanvasLayer/UI")
 foodUI = NodePath("../../CanvasLayer/UI/Food")
 title = NodePath("../../CanvasLayer/UI/Food/V/Title")
@@ -191,6 +194,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 scene = "Phone"
+Pscene = "random game"
 globals = [ [ "random", "r" ] ]
 mode = "CG"
 
@@ -204,6 +208,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 scene = "Phone"
+Pscene = "brawlhalla"
 globals = [ [ "random", "4" ] ]
 mode = "CG"
 
@@ -217,6 +222,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 scene = "Phone"
+Pscene = "instagram"
 globals = [ [ "random", "5" ] ]
 mode = "CG"
 
@@ -461,6 +467,7 @@ __meta__ = {
 }
 show = [ NodePath("../../../Phone") ]
 hide = [ NodePath("../..") ]
+scene = "phone"
 mode = "SH"
 
 [node name="bother people" type="Button" parent="CanvasLayer/UI/Bed/V"]
@@ -475,6 +482,7 @@ __meta__ = {
 }
 show = [ NodePath("../../../Call") ]
 hide = [ NodePath("../..") ]
+scene = "Bother"
 mode = "SH"
 
 [node name="Desk" type="Control" parent="CanvasLayer/UI"]
@@ -635,6 +643,11 @@ scene = "Bathroom"
 position = Vector2( -352.648, 327 )
 scale = Vector2( 1.33, 0.402999 )
 scene = "Outfit room"
+
+[node name="Drawer3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -639.649, 232 )
+scale = Vector2( 0.509222, -0.671907 )
+scene = "AchievementsBoard"
 
 [node name="Node2D" type="Node2D" parent="."]
 position = Vector2( -141, -650 )

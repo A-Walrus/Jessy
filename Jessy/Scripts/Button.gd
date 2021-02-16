@@ -3,6 +3,7 @@ extends Button
 export (Array, NodePath) var show = []
 export (Array, NodePath) var hide = []
 export  (String)  var  scene
+export  (String)  var  Pscene
 export (Array,Array) var globals
 export (Array,Array) var functions
 
@@ -14,6 +15,21 @@ func _ready():
 func pressed():
 	if not Globals.justClicked:
 		if mode.find('C')!=-1:
+			if scene == "Haircut":
+				Achievements.get_node('a').modify_achievements("MY HAIR" ,1)
+				Achievements.get_node('a').modify_achievements("I can see now" ,1)
+			if scene == "Makeup":
+				Achievements.get_node('a').modify_achievements("I'm pretty" ,1)
+				Achievements.get_node('a').modify_achievements("I'm pretty very very" ,1)
+			if scene == "Drawing":
+				Achievements.get_node('a').modify_achievements("ArtisArt" ,1)
+				Achievements.get_node('a').modify_achievements("Beautiful" ,1)
+			if Pscene == "random game":
+				Achievements.get_node('a').modify_achievements("GamerJess123" ,1)
+			if Pscene == "brawlhalla":
+				Achievements.get_node('a').modify_achievements("bullied by ron" ,1)
+			if Pscene == "instagram":
+				Achievements.get_node('a').modify_achievements("instajess" ,1)
 			get_tree().change_scene("res://Scenes/"+scene+".tscn")
 			if get_node("/root/World/Navigation2D/Jessy")!=null:
 				Globals.lastpos = get_node("/root/World/Navigation2D/Jessy").position

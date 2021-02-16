@@ -7,7 +7,6 @@ onready var character = $Jessy
 
 
 
-
 func _process(delta):
 	
 	var walk_distance = character_speed * delta

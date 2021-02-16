@@ -9,8 +9,6 @@
 [ext_resource path="res://Scenes/Brushes/Pencil.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scripts/get_drawing.gd" type="Script" id=8]
 
-
-
 [node name="Drawing" type="Node"]
 script = ExtResource( 1 )
 brushes = [ ExtResource( 7 ), ExtResource( 4 ) ]
