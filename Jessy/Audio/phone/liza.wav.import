@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/liza.wav-14256265bab3f33ec2fff7ddc4924896.sample"
+
+[deps]
+
+source_file="res://Audio/phone/liza.wav"
+dest_files=[ "res://.import/liza.wav-14256265bab3f33ec2fff7ddc4924896.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
