@@ -34,7 +34,7 @@ func pressed():
 			if Pscene == "instagram":
 				Achievements.get_node('a').modify_achievements("instajess" ,1)
 			get_tree().change_scene("res://Scenes/"+scene+".tscn")
-			if get_node("/root/World/Navigation2D/Jessy")!=null:
+			if get_node_or_null("/root/World/Navigation2D/Jessy")!=null:
 				Globals.lastpos = get_node("/root/World/Navigation2D/Jessy").position
 		if mode.find('SH')!=-1:
 			for s in show:
