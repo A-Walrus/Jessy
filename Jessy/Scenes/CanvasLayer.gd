@@ -1,6 +1,7 @@
 extends CanvasLayer
 
-
+var popupOn = false
+var queue = 0
 var file = File.new()
 var dict = {}
 onready var popup = get_node("Panel")
@@ -23,8 +24,8 @@ var defaultData = {"food no":{"total":1, "description":"say no to food", "accomp
 "clean jessy":{"total":1, "description":"go to the shower", "accomplished":0, "name":"clean jessy", "done":0},
 "jessy not masrihoola":{"total":6, "description":"go to the shower 6 times", "accomplished":0, "name":"jessy not masrihoola", "done":0},
 "instajess":{"total":15, "description":"enter instagram 15 times", "accomplished":0, "name":"instajess", "done":0},
-"Peepeepopo":{"total":1, "description":"go to the toilet", "accomplished":0, "name":"Peepeepopo", "done":0},
-"PEEPEEPOPO":{"total":10, "description":"go to the toilet 10 times", "accomplished":0, "name":"PEEPEEPOPO", "done":0},
+"Peepeepoopoo":{"total":1, "description":"go to the toilet", "accomplished":0, "name":"Peepeepoopoo", "done":0},
+"PEEPEEPOOPOO":{"total":10, "description":"go to the toilet 10 times", "accomplished":0, "name":"PEEPEEPOOPOO", "done":0},
 "happy mom":{"total":1, "description":"clean your room ", "accomplished":0, "name":"happy mom", "done":0},
 "happy mom very very":{"total":10, "description":"clean your room 10 times", "accomplished":0, "name":"happy mom very very", "done":0},
 "goodbye world":{"total":120, "description":"sleep for 2 minutes", "accomplished":0, "name":"goodbye world", "done":0}
@@ -60,9 +61,18 @@ func modify_achievements(achievement, value):
 	if dict[achievement].accomplished >= dict[achievement].total:
 		if dict[achievement].done == 0:
 			dict[achievement].done = 1
-			popup.get_node("Name").set_text(dict[achievement].name)
-			write_achievements()
-			_show_popup()
+			if queue == 0:
+				popup.get_node("Name").set_text(dict[achievement].name)
+				write_achievements()
+				_show_popup()
+				queue = queue + 1
+			else:
+				queue = queue + 1
+				yield(get_tree().create_timer(4.0 * queue), "timeout")
+				popup.get_node("Name").set_text(dict[achievement].name)
+				write_achievements()
+				_show_popup()
+
 
 func _show_popup():
 	popup.show()
@@ -76,6 +86,6 @@ func _hide_popup():
 	tween.start()
 	yield(tween, "tween_completed")
 	popup.hide()
-	
+	queue = queue - 1
 func _on_Timer_timeout():
 	_hide_popup()

@@ -24,6 +24,9 @@ func pressed():
 			if scene == "Drawing":
 				Achievements.get_node('a').modify_achievements("ArtisArt" ,1)
 				Achievements.get_node('a').modify_achievements("Beautiful" ,1)
+			if scene == "HW":
+				Achievements.get_node('a').modify_achievements("suicidal thoughts" ,1)
+				Achievements.get_node('a').modify_achievements("JESSY DONT DO IT" ,1)
 			if Pscene == "random game":
 				Achievements.get_node('a').modify_achievements("GamerJess123" ,1)
 			if Pscene == "brawlhalla":
