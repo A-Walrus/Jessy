@@ -22,8 +22,7 @@ _global_script_class_icons={
 
 config/name="Jessy"
 run/main_scene="res://Scenes/World.tscn"
-boot_splash/image="res://JESSY.ICON.png"
-config/icon="res://JESSY.ICON.png"
+boot_splash/image="res://Art/icons/desktop_icon.png"
 
 [autoload]
 
