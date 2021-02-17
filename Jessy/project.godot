@@ -24,6 +24,7 @@ config/name="Jessy"
 run/main_scene="res://Scenes/World.tscn"
 boot_splash/image="res://Art/icons/desktop_icon.png"
 boot_splash/bg_color=Color( 0.984314, 1, 0.670588, 1 )
+config/icon="res://Art/icons/desktop_icon.png"
 
 [autoload]
 
