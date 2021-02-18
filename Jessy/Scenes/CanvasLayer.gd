@@ -12,7 +12,7 @@ var defaultData = {"food no":{"total":1, "description":"say no to food", "accomp
 "suicidal thoughts":{"total":1, "description":"do your homework", "accomplished":0, "name":"suicidal thoughts", "done":0},
 "JESSY DONT DO IT":{"total":10, "description":"do your homework 10 times", "accomplished":0, "name":"JESSY DONT DO IT", "done":0},
 "pet tomy":{"total":120, "description":"pet tomy for 2 minutes", "accomplished":0, "name":"pet tomy", "done":0},
-"pet sammy":{"total":120, "description":"pet semy for 2 minutes", "accomplished":0, "name":"pet sammy", "done":0},
+"pet sammy":{"total":120, "description":"pet sammy for 2 minutes", "accomplished":0, "name":"pet sammy", "done":0},
 "GamerJess123":{"total":20, "description":"play a random game 20 times", "accomplished":0, "name":"GamerJess123", "done":0},
 "ArtisArt":{"total":1, "description":"draw something", "accomplished":0, "name":"ArtisArt", "done":0},
 "Beautiful":{"total":10, "description":"draw something 10 times", "accomplished":0, "name":"Beautiful", "done":0},

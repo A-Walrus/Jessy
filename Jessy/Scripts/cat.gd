@@ -17,5 +17,6 @@ func _on_Area2D_body_exited(body):
 	if body.name=="Hand":
 		time_end = OS.get_unix_time()
 		time_pet = time_end - time_start 
-		var seconds = time_pet % 60
-		Achievements.get_node('a').modify_achievements(cat_name ,seconds)
+		var seconds = time_pet
+		if seconds!=0:
+			Achievements.get_node('a').modify_achievements(cat_name ,seconds)
