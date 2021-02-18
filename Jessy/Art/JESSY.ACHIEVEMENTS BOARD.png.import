@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/JESSY.ACHIEVEMENTS BOARD.png-9e83d45168ac65ed3cd361af818c1cce.stex"
+path="res://.import/JESSY.ACHIEVEMENTS BOARD.png-b011f8b35801c5da339ef1dc3be37aa4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://JESSY.ACHIEVEMENTS BOARD.png"
-dest_files=[ "res://.import/JESSY.ACHIEVEMENTS BOARD.png-9e83d45168ac65ed3cd361af818c1cce.stex" ]
+source_file="res://Art/JESSY.ACHIEVEMENTS BOARD.png"
+dest_files=[ "res://.import/JESSY.ACHIEVEMENTS BOARD.png-b011f8b35801c5da339ef1dc3be37aa4.stex" ]
 
 [params]
 
