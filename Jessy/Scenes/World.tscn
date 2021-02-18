@@ -397,12 +397,9 @@ globals = [ [ "nameCall", "Rudich" ] ]
 mode = "CG"
 
 [node name="p8" type="Button" parent="CanvasLayer/UI/Call/V/HBoxContainer/VBoxContainer2"]
-margin_top = 232.0
+margin_top = 200.0
 margin_right = 219.0
-margin_bottom = 286.0
-theme = ExtResource( 14 )
-custom_fonts/font = ExtResource( 13 )
-custom_colors/font_color = Color( 1, 0.980392, 0.360784, 1 )
+margin_bottom = 246.0
 text = "Dan"
 script = ExtResource( 12 )
 __meta__ = {
