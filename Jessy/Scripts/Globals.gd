@@ -1,6 +1,6 @@
 extends Node
 
-var nameCall=""
+var nameCall="Guy"
 
 var random = ""
 

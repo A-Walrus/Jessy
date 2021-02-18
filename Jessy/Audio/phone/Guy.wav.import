@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Guy.wav-e6ff4b5c6f0a006db78f587c7430033d.sample"
+
+[deps]
+
+source_file="res://Audio/phone/Guy.wav"
+dest_files=[ "res://.import/Guy.wav-e6ff4b5c6f0a006db78f587c7430033d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
